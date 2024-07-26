@@ -250,8 +250,6 @@ export function dropdown() {
     document.addEventListener('click', (e) => {
         const isDropdownButton = e.target.matches("[data-dropdown-button]") || e.target.closest("[data-dropdown-button]")
 
-        console.log(isDropdownButton)
-
         if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) return
 
         let currentDropdown
