@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 0;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  line-height: 24px;
+  text-transform: uppercase;
+  transition: .2s ease-out;
+  
+  &__azure {
+    width: 210px;
+    color: #FFF;
+    background-color: $azure;
+    &:hover {
+      background-color: darken($azure, 10%);
+    }
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
