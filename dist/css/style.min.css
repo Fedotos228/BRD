@@ -1202,6 +1202,16 @@ input {
   width: 16px;
   height: 16px;
 }
+.button__outline {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid rgba(35, 35, 35, 0.7);
+}
+.button__outline:hover {
+  background-color: #07214d;
+  border-color: #07214d;
+  color: #fff;
+}
 
 article.post {
   width: 100%;
@@ -1341,4 +1351,41 @@ article.post .post__footer time {
 }
 article.post .post__footer a:hover {
   color: #5182f6;
+}
+
+aside.aside-menu .aside-menu__navigation {
+  margin-top: 10px;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  overflow: hidden;
+}
+aside.aside-menu .aside-menu__navigation ul li:not(:last-child) {
+  border-bottom: 1px solid #ededed;
+}
+aside.aside-menu .aside-menu__navigation ul li a {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: block;
+}
+@media (max-width: 1140px) {
+  aside.aside-menu .aside-menu__navigation ul li a {
+    padding-top: calc(
+                14px + 2 * ((100vw - 320px) / 820)
+            );
+    padding-bottom: calc(
+                14px + 2 * ((100vw - 320px) / 820)
+            );
+    padding-left: calc(
+                16px + 8 * ((100vw - 320px) / 820)
+            );
+    padding-right: calc(
+                16px + 8 * ((100vw - 320px) / 820)
+            );
+  }
+}
+aside.aside-menu .aside-menu__navigation ul li a:hover {
+  background-color: #07214d;
+  color: #fff;
 }

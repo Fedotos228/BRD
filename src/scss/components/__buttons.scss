@@ -23,4 +23,15 @@
 			height: 16px;
 		}
 	}
+
+	&__outline {
+		width: 100%;
+		background-color: #fff;
+		border: 1px solid $dark700;
+		&:hover {
+			background-color: $oxford;
+			border-color: $oxford;
+			color: #fff;
+		}
+	}
 }
