@@ -1,10 +1,9 @@
-
 @layer base {
 	h1 {
-		@apply text-4xl font-bold
+		@apply text-4xl font-bold;
 	}
 	h2 {
-		@apply text-3xl font-bold
+		@apply text-3xl font-bold;
 	}
 	h3 {
 	}
@@ -13,26 +12,26 @@
 	h5 {
 	}
 	h6 {
-    }
+	}
 }
 
 p {
 }
 
 .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow-y: scroll;
 }
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 .tabs__content {
-    display: none;
-    &--active {
-        display: block;
-    }
+	display: none;
+	&--active {
+		display: block;
+	}
 }
 
 .search {
@@ -45,7 +44,7 @@ p {
 	border: 1px solid $lines;
 	padding: 12px;
 	border-radius: 8px;
-	>button {
+	> button {
 		width: 20px;
 		height: 20px;
 		position: absolute;
@@ -57,7 +56,17 @@ p {
 	}
 }
 
-input{
+input {
 	width: 100%;
 	outline: none;
+}
+
+.grid {
+	display: grid;
+}
+
+.posts-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	@include adaptiv-value('gap', 30, 20, 1);
 }
