@@ -23,7 +23,7 @@
               padding: 55px;
               transition: .45s ease-out;
               &:hover {
-                transform: scale(1.1);
+                transform: scale(1.05);
               }
             }
             &--body{
@@ -137,9 +137,9 @@
 }
 
 .statistics {
-  height: 585px;
   margin-bottom: 40px;
   &__container {
+    padding: 80px 15px;
     height: 100%;
     display: flex;
     align-items: center;

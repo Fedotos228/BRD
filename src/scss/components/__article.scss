@@ -1,0 +1,87 @@
+article {
+	&.post {
+		width: 100%;
+		border: 1px solid $lines;
+		transition: 0.3s;
+		border-radius: 8px;
+		position: relative;
+		&:hover {
+			border-color: $oxford;
+			.post__thumbnail {
+				border-color: $oxford;
+				img {
+					scale: 1.015;
+				}
+			}
+		}
+		.post__thumbnail {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: 0.3s;
+			border-bottom: 1px solid $lines;
+			@include adaptiv-value('padding', 16, 14, 1);
+			img {
+				transition: 0.3s;
+				width: 100%;
+			}
+		}
+
+		.post__body {
+			@include adaptiv-value('padding-left', 16, 14, 1);
+			@include adaptiv-value('padding-right', 16, 14, 1);
+			@include adaptiv-value('padding-top', 20, 14, 1);
+			@include adaptiv-value('padding-bottom', 20, 14, 1);
+			p {
+				line-height: 160%;
+				@include text-truncate(3);
+				margin-top: 8px;
+			}
+			a {
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 150%;
+				@include text-truncate(2);
+				&:hover {
+					color: $azure;
+				}
+				&::after {
+					content: '';
+					inset: 0;
+					width: 100%;
+					height: 100%;
+					display: block;
+					position: absolute;
+				}
+			}
+		}
+
+		.post__footer {
+			@include adaptiv-value('padding-left', 16, 14, 1);
+			@include adaptiv-value('padding-right', 16, 14, 1);
+			@include adaptiv-value('padding-top', 12, 10, 1);
+			@include adaptiv-value('padding-bottom', 12, 10, 1);
+			border-top: 1px solid $lines;
+			color: $dark700;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			time,
+			a {
+				position: relative;
+				text-transform: uppercase;
+				z-index: 2;
+			}
+
+			time {
+				color: $dark700;
+			}
+
+			a {
+				&:hover {
+					color: $azure;
+				}
+			}
+		}
+	}
+}

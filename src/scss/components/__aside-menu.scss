@@ -1,0 +1,27 @@
+aside.aside-menu {
+	.aside-menu__navigation {
+		margin-top: 10px;
+		border: 1px solid $lines;
+		border-radius: 8px;
+		overflow: hidden;
+		ul {
+			li {
+				&:not(:last-child) {
+					border-bottom: 1px solid $lines;
+				}
+				a {
+					@include adaptiv-value('padding-top', 16, 14, 1);
+					@include adaptiv-value('padding-bottom', 16, 14, 1);
+					@include adaptiv-value('padding-left', 24, 16, 1);
+					@include adaptiv-value('padding-right', 24, 16, 1);
+					display: block;
+
+					&:hover {
+						background-color: $oxford;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}

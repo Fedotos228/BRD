@@ -1,26 +1,26 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
-    font-family: $fontFamily, sans-serif;
-    font-size: $fontSize;
-    color: $maincolor;
-    overflow-x: hidden;
-    animation: fade 0.5s;
-    &.lock {
-        overflow: hidden;
-        touch-action: none;
-    }
+	font-family: $fontFamily, sans-serif;
+	font-size: $fontSize;
+	color: $maincolor;
+	overflow-x: hidden;
+	animation: fade 0.5s;
+	&.lock {
+		overflow: hidden;
+		touch-action: none;
+	}
 }
 
 aside,
@@ -29,11 +29,11 @@ footer,
 header,
 section,
 main {
-    display: block;
+	display: block;
 }
 
 li {
-    list-style: none;
+	list-style: none;
 }
 
 h1,
@@ -42,24 +42,25 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+	margin: 0;
 }
 
 a {
-    text-decoration: none;
-    color: $maincolor;
+	text-decoration: none;
+	color: $maincolor;
+	transition: 0.3s;
 }
 
 a:focus,
 a:active {
-    outline: none;
+	outline: none;
 }
 
 button {
-    outline: none;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
 }
 
 button,
@@ -67,32 +68,32 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
 }
 
 small {
-    font-size: 80%;
+	font-size: 80%;
 }
 
 img {
-    border-style: none;
+	border-style: none;
 }
 
 textarea {
-    overflow: auto;
+	overflow: auto;
 }
 
 [hidden] {
-    display: none;
+	display: none;
 }
 
 @keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
