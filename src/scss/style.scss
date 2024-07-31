@@ -9,7 +9,7 @@
 @import 'fonts.scss';
 @import 'base/colors.scss';
 // Conectarea Fonturilor pentru Iconite
-// @import 'base/icons.scss';
+@import 'icons.scss';
 // Main Font =======================================================================================================================
 $fontFamily: 'Onest';
 $fontSize: rem(14px); // 14 - marimea textului din maket
@@ -38,6 +38,10 @@ $mobileMedium: rem(639.98px);
 $mobileSmall: rem(479.98px);
 // Stilurile de baza
 @import 'base/null.scss';
+
+:root {
+    --black100: #000000 100%;
+}
 .wrapper {
     min-width: 100%;
     display: flex;

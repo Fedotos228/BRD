@@ -14,10 +14,10 @@
     "license": "ISC",
     "dependencies": {
         "autoprefixer": "^10.4.19",
+        "gsap": "^3.12.5",
         "gulp-cli": "^2.3.0",
         "gulp-imagemin": "^8.0.0",
-        "gulp-webp": "^4.0.1",
-        "postcss": "^8.4.40"
+        "gulp-webp": "^4.0.1"
     },
     "devDependencies": {
         "browser-sync": "latest",
@@ -45,7 +45,6 @@
         "gulp-zip": "latest",
         "sass": "latest",
         "sass-rem": "latest",
-        "tailwindcss": "^3.4.6",
         "vinyl-ftp": "latest",
         "webp-converter": "2.2.3",
         "webpack": "latest",

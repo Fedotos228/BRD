@@ -23,4 +23,8 @@
       height: 16px;
     }
   }
+  &__yellow {
+    background-color: $yellow;
+    color: $maincolor;
+  }
 }

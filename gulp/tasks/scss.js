@@ -1,12 +1,9 @@
-import autoprefixer from 'autoprefixer' // Ensure you're importing the actual autoprefixer package
 import cleanCss from 'gulp-clean-css'
 import groupCssMediaQueries from 'gulp-group-css-media-queries'
-import postcss from 'gulp-postcss'
 import rename from 'gulp-rename'
 import gulpSass from 'gulp-sass'
 import webpcss from 'gulp-webpcss'
 import dartSass from 'sass'
-import tailwindcss from 'tailwindcss'
 
 const sass = gulpSass(dartSass)
 
@@ -22,16 +19,6 @@ export const scss = () => {
         .pipe(sass({
             outputStyle: 'expanded'
         }))
-        .pipe(
-            postcss([
-                tailwindcss(),
-                autoprefixer({
-                    grid: true,
-                    overrideBrowserslist: ['last 3 versions'],
-                    cascade: true
-                })
-            ])
-        )
         .pipe(
             app.plugins.if(
                 app.isBuild,

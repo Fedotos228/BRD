@@ -1,0 +1,28 @@
+.footer {
+  background-color: $oxford;
+  color: #FFF;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0;
+  }
+  &__list{
+    p {
+      text-transform: uppercase;
+      color: $white500;
+      margin-bottom: 24px;
+    }
+    ul {
+      max-width: 180px;
+      width: 100%;
+      margin-bottom: 24px;
+      li {
+        margin-bottom: 16px;
+        a {
+          color: #FFF;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
