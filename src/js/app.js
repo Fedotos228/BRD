@@ -9,6 +9,7 @@ const burger = document.querySelector('.burger')
 const menu = document.querySelector('.header__nav')
 const headerSearch = document.querySelector('.header__search')
 const linkItem = document.querySelectorAll('.links-item')
+const heroCards = document.querySelectorAll('.hero-cards__item')
 
 if (burger && menu) {
     flsFunctions.burger(burger, menu, header)
@@ -62,11 +63,12 @@ new Swiper('.slider-hero__body', {
     },
 })
 
-function createIcon(icon, type, iterations) {
+function createIcon(icon, type, paths) {
     icon.classList.add(`icon-${type}`)
-    for (let i = 1; i < iterations; i++) {
+    console.log(icon)
+    for (let i = 0; i < paths; i++) {
         let path = document.createElement('span')
-        path.classList.add(`path${i}`)
+        path.classList.add(`path${i + 1}`)
         icon.appendChild(path)
     }
 }
@@ -75,26 +77,20 @@ if (linkItem) {
     linkItem.forEach(item => {
         const icon = item.querySelector('i')
         const link = item.getAttribute('href')
-        const extention = link.split('.').pop()
+        const extension = link.split('.').pop()
 
-        switch (extention) {
+        switch (extension) {
             case 'pdf':
-                createIcon(icon, 'pdf', 9)
-                break
+                return createIcon(icon, 'pdf', 9)
             case 'docx':
-                createIcon(icon, 'docx', 7)
-                break
+                return createIcon(icon, 'docx', 7)
             case 'xlsx':
-                createIcon(icon, 'xlsx', 7)
-                break
+                return createIcon(icon, 'xlsx', 7)
             default:
                 icon.classList.add('icon-link')
         }
     })
 }
-
-
-const heroCards = document.querySelectorAll('.hero-cards__item')
 
 if (heroCards.length > 0) {
     heroCards.forEach(card => {
