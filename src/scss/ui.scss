@@ -9,8 +9,8 @@ h2 {
 	font-weight: 700;
 }
 h3 {
-font-size: 32px;
-font-weight: 700;
+	font-size: 32px;
+	font-weight: 700;
 }
 h4 {
 	font-size: 24px;
@@ -159,4 +159,81 @@ input {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 	@include adaptiv-value('gap', 30, 20, 1);
+}
+
+.newsletter {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	max-width: 600px;
+	width: 100%;
+	border: none;
+	box-shadow: 0px 4px 30px 0px rgba(132, 132, 132, 0.15);
+	border-radius: 8px;
+	@include adaptiv-value("padding", 50, 15, 1);
+	
+	&::backdrop {
+		background-color: rgba(0, 0, 0, 0.60);
+		opacity: 0.75;
+	}
+
+	&__close {
+		position: absolute;
+		top: 20px;
+		right: 34px;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+
+	h2 {
+		margin-bottom: 10px;
+	}
+
+	p {
+		color: $dark700;
+		margin-bottom: 42px;
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+		label {
+			span {
+				display: block;
+				margin-bottom: 5px;
+			}
+			input {
+				border: 1px solid $lines;
+				border-radius: 8px;
+				padding: 10px 12px;
+				font-size: 16px;
+				transition: .2s ease-out;
+				&:hover,
+				&:focus-within {
+					border-color: $dark500;
+				}
+			}
+		}
+		button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 12px;
+			grid-column: 2 span;
+			margin-top: 12px;
+			border: 1px solid $maincolor;
+			border-radius: 8px;
+			padding: 10px 0;
+			text-transform: uppercase;
+			transition: .2s ease-out;
+			&:hover{
+				background-color: $oxford;
+				color: white;
+			}
+		}
+	}
 }

@@ -65,7 +65,6 @@ new Swiper('.slider-hero__body', {
 
 function createIcon(icon, type, paths) {
     icon.classList.add(`icon-${type}`)
-    console.log(icon)
     for (let i = 0; i < paths; i++) {
         let path = document.createElement('span')
         path.classList.add(`path${i + 1}`)
@@ -109,6 +108,22 @@ if (heroCards.length > 0) {
         })
     })
 }
+
+const newsletterDialog = document.querySelector('.newsletter')
+
+if (newsletterDialog) {
+    const newsletterClose = newsletterDialog.querySelector('.newsletter__close')
+    const newsletterButton = document.querySelector('.newsletter__button')
+
+    newsletterButton.addEventListener('click', () => {
+        newsletterDialog.showModal()
+    })
+
+    newsletterClose.addEventListener('click', () => {
+        newsletterDialog.close()
+    })
+}
+
 // let sliderTemplate = new Swiper('.slider', {
 //     effect: 'fade',
 //     autoplay:{

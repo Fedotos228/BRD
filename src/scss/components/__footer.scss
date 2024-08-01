@@ -25,7 +25,41 @@
       }
     }
   }
-  &__link {
-    border: 1px solid $azure;
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $azure;
+    border-bottom: 1px solid $azure;
+    a {
+      max-width: 410px;
+      width: 100%;
+      padding: 15px 0;
+      color: #FFF;
+      &:nth-child(2) {
+        text-align: center;
+        border-left: 1px solid $azure;
+        border-right: 1px solid $azure;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+  &__bottom {
+    .footer__container {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include adaptiv-value("padding-top", 30, 15, 1);
+      @include adaptiv-value("padding-bottom", 30, 15, 1);
+      p {
+        color: #FFF;
+      }
+      .copyright {
+        color: $white500;
+      }
+    }
   }
 }
