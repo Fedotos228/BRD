@@ -4,6 +4,8 @@
   &__nav {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     padding: 70px 0;
   }
   &__list{
@@ -36,6 +38,17 @@
       width: 100%;
       padding: 15px 0;
       color: #FFF;
+      @media (max-width: $mobileSmall) {
+        font-size: 12px;
+      }
+      &:first-child {
+        text-align: left;
+        padding-left: 15px;
+        @media (max-width: $tablet) {
+          text-align: center;
+          padding-left: 0;
+        }
+      }
       &:nth-child(2) {
         text-align: center;
         border-left: 1px solid $azure;
@@ -43,19 +56,31 @@
       }
       &:last-child {
         text-align: right;
+        padding-right: 15px;
+        @media (max-width: $tablet) {
+          text-align: center;
+          padding-right: 0;
+        }
       }
     }
   }
   &__bottom {
     .footer__container {
-
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       @include adaptiv-value("padding-top", 30, 15, 1);
       @include adaptiv-value("padding-bottom", 30, 15, 1);
+      @media (max-width: $mobileMedium) {
+        justify-content: center;
+        gap: 15px;
+      }
       p {
         color: #FFF;
+        @media (max-width: $mobileMedium) {
+          text-align: center;
+        }
       }
       .copyright {
         color: $white500;
