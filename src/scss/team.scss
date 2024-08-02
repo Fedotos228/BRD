@@ -1,0 +1,19 @@
+.team {
+  &__body{
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px 30px;
+    .team__item {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      h5 {
+        margin-top: 8px;
+        font-weight: 500;
+      }
+      p{
+        color: $dark700;
+      }
+    }
+  }
+}

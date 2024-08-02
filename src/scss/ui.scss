@@ -18,7 +18,7 @@ h4 {
 	font-weight: 700;
 }
 h5 {
-	font-size: 20px;
+	@include adaptiv-value("font-size", 20, 16, 1);
 	font-weight: 600;
 }
 h6 {
@@ -27,6 +27,7 @@ h6 {
 }
 
 p {
+
 }
 
 main {
@@ -163,6 +164,12 @@ input {
 .posts-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	@include adaptiv-value('gap', 30, 20, 1);
+}
+
+.page-grid {
+	display: grid;
+	grid-template-columns: minmax(250px, 300px) 1fr;
 	@include adaptiv-value('gap', 30, 20, 1);
 }
 
