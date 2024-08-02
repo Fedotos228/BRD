@@ -22,7 +22,10 @@
         margin-bottom: 16px;
         a {
           color: #FFF;
-          text-decoration: none;
+          line-height: 130%;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
