@@ -262,8 +262,5 @@ export function dropdown() {
             if (dropdown === currentDropdown) return
             dropdown.classList.remove('active')
         })
-
-
-        console.log('dropdown')
     })
 }

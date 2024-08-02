@@ -65,7 +65,6 @@ new Swiper('.slider-hero__body', {
 
 function createIcon(icon, type, paths) {
     icon.classList.add(`icon-${type}`)
-    console.log(icon)
     for (let i = 0; i < paths; i++) {
         let path = document.createElement('span')
         path.classList.add(`path${i + 1}`)
@@ -109,6 +108,52 @@ if (heroCards.length > 0) {
         })
     })
 }
+
+const newsletterDialog = document.querySelector('.newsletter')
+
+if (newsletterDialog) {
+    const newsletterClose = newsletterDialog.querySelector('.newsletter__close')
+    const newsletterButton = document.querySelector('.newsletter__button')
+
+    newsletterButton.addEventListener('click', () => {
+        newsletterDialog.showModal()
+    })
+
+    newsletterClose.addEventListener('click', () => {
+        newsletterDialog.close()
+    })
+}
+
+const counters = document.querySelectorAll('.statistics-item span')
+const statistics = document.querySelector('.statistics')
+const speed = 100
+
+if (statistics) {
+    window.addEventListener('scroll', () => {
+        const statisticPos = statistics.offsetTop
+        const scrollPos = window.scrollY
+
+        if (scrollPos >= statisticPos - 300) {
+            counters.forEach(counter => {
+                const animate = () => {
+                    const value = +counter.getAttribute('akhi')
+                    const data = +counter.innerText
+
+                    const time = value / speed
+                    if (data < value) {
+                        counter.innerText = Math.ceil(data + time)
+                        setTimeout(animate, 1)
+                    } else {
+                        counter.innerText = value
+                    }
+
+                }
+                animate()
+            })
+        }
+    })
+}
+
 // let sliderTemplate = new Swiper('.slider', {
 //     effect: 'fade',
 //     autoplay:{

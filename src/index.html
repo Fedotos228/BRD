@@ -3,7 +3,7 @@
 @@include('./components/head.html', {'title': ''})
 
 <body>
-	@@include('./components/header.html')
+	<!-- @@include('./components/header.html') -->
 	<main>
 		<section class='hero'>
 			<div class="header__container">
@@ -138,35 +138,36 @@
 						<i></i>
 						<p>cna.md</p>
 					</a>
-					<button class='button button__yellow'>
+					<button class='button button__yellow newsletter__button'>
 						Abonează-te la newsletter
 						<i class='icon-bell'></i>
 					</button>
 				</aside>
 			</div>
 		</section>
+
 		<section class='statistics'>
 			<div class="statistics__container"
 				style='background: linear-gradient(0, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 100%), url("@img/clouds.jpeg") 50% 50% / cover no-repeat'>
 				<div class="statistics-item">
 					<h4>Participanți DOR</h4>
-					<span>1000</span>
+					<span akhi='1000'>0</span>
 				</div>
 				<div class="statistics-item">
 					<h4>Centre educaționale în Diasporă</h4>
-					<span>22</span>
+					<span akhi='22'>0</span>
 				</div>
 				<div class="statistics-item">
 					<h4>Asociații ale diasporei</h4>
-					<span>186</span>
+					<span akhi='186'>0</span>
 				</div>
 				<div class="statistics-item">
 					<h4>Proiecte implementate DEH</h4>
-					<span>110</span>
+					<span akhi='110'>0</span>
 				</div>
 				<div class="statistics-item">
 					<h4>Proiecte implementate DAR</h4>
-					<span>104</span>
+					<span akhi='104'>0</span>
 				</div>
 			</div>
 		</section>
@@ -187,6 +188,8 @@
             </div>
         </div> -->
 	</main>
+	@@include('./components/newsletter-modal.html')
+
 	@@include('./components/footer.html')
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
@@ -210,7 +213,6 @@
 
 	</script>
 	<script src="js/app.min.js"></script>
-
 </body>
 
 </html>
