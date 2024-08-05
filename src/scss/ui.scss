@@ -67,9 +67,6 @@ main {
 		top: 50%;
 		transform: translateY(-50%);
 	}
-	input {
-		width: 0px;
-	}
 }
 
 input {
@@ -270,5 +267,64 @@ input {
 		&:hover {
 			border-color: $oxford;
 		}
+	}
+}
+
+.cards-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 20px;
+}
+
+.page-title {
+	padding: 24px;
+	background-color: #FAFAFA;
+	border: 1px solid $lines;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+.underline-effect {
+	position: relative;
+	border-bottom: 1px solid $lines;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $oxford;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform .3s;
+	}
+	&:hover::after {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+}
+
+.categories {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	margin-bottom: 24px;
+	&-button {
+		width: 25%;
+		padding: 16px 25px;
+		border-radius: 8px;
+		text-align: center;
+	}
+}
+
+.years {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 24px;
+	margin: 20px 0;
+	&-button {
+		padding: 16px 30px;
 	}
 }

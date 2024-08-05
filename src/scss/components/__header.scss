@@ -92,6 +92,9 @@
 			align-items: center;
 			justify-content: center;
 		}
+		input {
+			width: 0px;
+		}
 		&.active {
 			width: 300px;
 			input {

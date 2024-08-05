@@ -321,7 +321,7 @@ h6 {
 a {
   text-decoration: none;
   color: #232323;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 a:focus,
@@ -495,9 +495,6 @@ main {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-}
-.search input {
-  width: 0px;
 }
 
 input {
@@ -711,6 +708,65 @@ input {
   border-color: #07214d;
 }
 
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.page-title {
+  padding: 24px;
+  background-color: #FAFAFA;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.underline-effect {
+  position: relative;
+  border-bottom: 1px solid #ededed;
+}
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #07214d;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+.underline-effect:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.categories-button {
+  width: 25%;
+  padding: 16px 25px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.years {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 20px 0;
+}
+.years-button {
+  padding: 16px 30px;
+}
+
 .footer {
   background-color: #07214d;
   color: #FFF;
@@ -911,6 +967,9 @@ input {
   align-items: center;
   justify-content: center;
 }
+.header .header__search input {
+  width: 0px;
+}
 .header .header__search.active {
   width: 300px;
 }
@@ -1030,6 +1089,7 @@ input {
   pointer-events: none;
   transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  z-index: 11;
 }
 .dropdown.active > .dropdown-button + .dropdown-menu {
   opacity: 1;
@@ -1302,6 +1362,7 @@ aside.aside-menu .aside-menu__navigation ul li a {
   padding-left: 24px;
   padding-right: 24px;
   display: block;
+  transition: background-color 0.2s ease-out;
 }
 @media (max-width: 1290px) {
   aside.aside-menu .aside-menu__navigation ul li a {
@@ -1334,6 +1395,30 @@ aside.aside-menu .aside-menu__navigation ul li a {
 aside.aside-menu .aside-menu__navigation ul li a:hover {
   background-color: #07214d;
   color: #fff;
+}
+
+.card {
+  position: relative;
+  height: 250px;
+  border-radius: 8px;
+}
+.card:hover .card-button {
+  transform: translateY(-5px) translateX(5px);
+}
+.card-button {
+  display: block;
+  margin-left: auto;
+  padding: 10px;
+  transition: 0.2s ease-out;
+}
+.card-button i {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.card p {
+  padding: 24px;
+  color: #FFF;
+  line-height: 24px;
 }
 
 .hero {
@@ -1541,4 +1626,64 @@ aside.aside-menu .aside-menu__navigation ul li a:hover {
 }
 .team__body .team__item p {
   color: rgba(35, 35, 35, 0.7);
+}
+.team-single .profile {
+  border: 1px solid #ededed;
+  border-radius: 8px;
+}
+.team-single .profile-main {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  border-bottom: 1px solid #ededed;
+}
+@media (max-width: 47.99875rem) {
+  .team-single .profile-main {
+    flex-direction: column;
+  }
+}
+.team-single .profile-main img {
+  width: 100%;
+  max-width: 320px;
+}
+.team-single .profile-main > ul li {
+  margin-bottom: 24px;
+}
+@media (max-width: 1290px) {
+  .team-single .profile-main > ul li {
+    margin-bottom: calc(
+                15px + 9 * ((100vw - 320px) / 970)
+            );
+  }
+}
+.team-single .profile-main > ul li h6 {
+  margin-bottom: 10px;
+}
+.team-single .profile-main > ul li span {
+  font-size: 16px;
+  color: rgba(35, 35, 35, 0.7);
+}
+.team-single .profile-details {
+  padding: 24px;
+}
+.team-single .profile-details h5 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.team-single .profile-details ul li {
+  display: flex;
+  gap: 10px;
+  color: rgba(35, 35, 35, 0.7);
+  width: fit-content;
+  margin-bottom: 10px;
+}
+.team-single .profile-details ul li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  margin-top: 6px;
+  background-color: rgba(35, 35, 35, 0.7);
 }
