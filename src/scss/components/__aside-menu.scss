@@ -15,7 +15,7 @@ aside.aside-menu {
 					@include adaptiv-value('padding-left', 24, 16, 1);
 					@include adaptiv-value('padding-right', 24, 16, 1);
 					display: block;
-
+					transition: background-color .2s ease-out;
 					&:hover {
 						background-color: $oxford;
 						color: #fff;

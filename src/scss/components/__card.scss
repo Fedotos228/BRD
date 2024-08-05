@@ -1,0 +1,25 @@
+.card {
+  position: relative;
+  height: 250px;
+  border-radius: 8px;
+  &:hover {
+    .card-button {
+      transform: translateY(-5px) translateX(5px);
+    }
+  }
+  &-button {
+    display: block;
+    margin-left: auto;
+    padding: 10px;
+    transition: .2s ease-out;
+    i {
+      font-size: 24px;
+      color: $white500;
+    }
+  }
+  p {
+    padding: 24px;
+    color: #FFF;
+    line-height: 24px;
+  }
+}

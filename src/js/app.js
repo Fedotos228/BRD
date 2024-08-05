@@ -37,10 +37,10 @@ if (headerSearch) {
 
 new Swiper('.slider-hero__body', {
     effect: 'fade',
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
     observer: true,
     observeParents: true,
     slidesPerView: 1,
@@ -126,7 +126,7 @@ if (newsletterDialog) {
 
 const counters = document.querySelectorAll('.statistics-item span')
 const statistics = document.querySelector('.statistics')
-const speed = 100
+const speed = 500
 
 if (statistics) {
     window.addEventListener('scroll', () => {
@@ -152,6 +152,16 @@ if (statistics) {
             })
         }
     })
+}
+
+const backButton = document.querySelector('#back-button')
+
+function goBackHistory() {
+    window.history.back()
+}
+
+if (backButton) {
+    backButton.addEventListener('click', goBackHistory)
 }
 
 // let sliderTemplate = new Swiper('.slider', {
