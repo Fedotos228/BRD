@@ -1530,6 +1530,12 @@ aside.aside-menu .aside-menu__navigation ul li a:hover {
   gap: 10px;
   padding: 16px;
 }
+@media (max-width: 39.99875rem) {
+  .pagination {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .pagination-list {
   display: flex;
   align-items: center;
