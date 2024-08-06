@@ -1,0 +1,34 @@
+.contact {
+  display: grid;
+  grid-template-columns: minmax(320px, 630px) 250px;
+  place-items: center;
+  gap: 30px;
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    place-items: initial;
+  }
+  &__map {
+    width: 100%;
+    height: 550px;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-details {
+    &__block {
+      border-bottom: 1px solid $lines;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      h6 {
+        color: $oxford;
+        margin-bottom: 16px;
+      }
+      ul {
+        li {
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}

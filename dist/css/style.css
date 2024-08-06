@@ -461,7 +461,7 @@ h5 {
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -1842,4 +1842,37 @@ aside.aside-menu .aside-menu__navigation ul li a:hover {
   border-radius: 100%;
   margin-top: 6px;
   background-color: rgba(35, 35, 35, 0.7);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(320px, 630px) 250px;
+  place-items: center;
+  gap: 30px;
+}
+@media (max-width: 61.99875rem) {
+  .contact {
+    grid-template-columns: 1fr;
+    place-items: initial;
+  }
+}
+.contact__map {
+  width: 100%;
+  height: 550px;
+}
+.contact__map iframe {
+  width: 100%;
+  height: 100%;
+}
+.contact-details__block {
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+.contact-details__block h6 {
+  color: #07214d;
+  margin-bottom: 16px;
+}
+.contact-details__block ul li {
+  line-height: 26px;
 }
