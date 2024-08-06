@@ -8,7 +8,7 @@ const header = document.querySelector('.header')
 const burger = document.querySelector('.burger')
 const menu = document.querySelector('.header__nav')
 const headerSearch = document.querySelector('.header__search')
-const linkItem = document.querySelectorAll('.links-item')
+const linkItem = document.querySelectorAll('[data-icon]')
 const heroCards = document.querySelectorAll('.hero-cards__item')
 
 if (burger && menu) {

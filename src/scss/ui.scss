@@ -60,12 +60,16 @@ main {
 	border: 1px solid $lines;
 	padding: 12px;
 	border-radius: 8px;
+	transition: .2s;
 	> button {
 		width: 20px;
 		height: 20px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+	}
+	&:hover {
+		border-color: $azure
 	}
 }
 
@@ -125,11 +129,11 @@ input {
 	}
 }
 
-.links {
+.aside-links {
 	h4 {
 		margin-bottom: 20px;
 	}
-	&-item {
+	&__item {
 		display: flex;
 		align-items: center;
 		gap: 10px;
@@ -162,12 +166,19 @@ input {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 	@include adaptiv-value('gap', 30, 20, 1);
+
+
 }
 
 .page-grid {
 	display: grid;
 	grid-template-columns: minmax(250px, 300px) 1fr;
 	@include adaptiv-value('gap', 30, 20, 1);
+
+	@media (max-width: $mobile) {
+		grid-template-columns:  1fr;
+		gap: 50px;
+	}
 }
 
 .newsletter {
@@ -306,15 +317,18 @@ input {
 }
 
 .categories {
-	display: flex;
-	align-items: center;
-	gap: 24px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	@include adaptiv-value("gap", 24, 10, 1);
 	margin-bottom: 24px;
+	@media (max-width: $mobile) {
+		grid-template-columns: repeat(2, 1fr);
+	}
 	&-button {
-		width: 25%;
+		width: 100%;
 		padding: 16px 25px;
-		border-radius: 8px;
 		text-align: center;
+		white-space: nowrap;
 	}
 }
 
@@ -324,7 +338,58 @@ input {
 	flex-wrap: wrap;
 	gap: 24px;
 	margin: 20px 0;
+	@media (max-width: $mobile) {
+			justify-content: center;
+	}
 	&-button {
 		padding: 16px 30px;
+	}
+}
+
+.guide-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 20px;
+	background-color: #FAFAFA;
+	border: 1px solid $lines;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.links {
+	margin-top: 10px;
+	border: 1px solid $lines;
+	border-radius: 8px;
+	transition: .2s;
+
+	&-item {
+		display: block;
+		width: 100%;
+		@include adaptiv-value("padding", 24, 18, 1);
+		border-bottom: 1px solid $lines;
+		&:hover {
+			border-color: $azure;
+			.links-item {
+				&__title {
+					color: $azure;
+				}
+			}
+		}
+		&__title {
+			font-size: 16px;
+			font-weight: 500;
+			transition: .2s;
+
+		}
+		&__details {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-top: 10px;
+			p {
+				color: $azure;
+				text-decoration: underline;
+			}
+		}
 	}
 }
