@@ -113,7 +113,15 @@ $mobileSmall: rem(479.98px);
 @import 'components/__card.scss';
 @import 'components/__guide-card.scss';
 @import 'components/__pagination.scss';
+@import 'components/__accordion.scss';
+@import 'components/__video-card.scss';
 // Conectarea stilurilor pentru pagini
 @import 'home';
 @import 'team';
-@import 'contact'
+@import 'contact';
+@import 'support';
+@import 'podcasts';
+@import 'partners';
+@import 'program-single';
+@import 'associates';
+@import 'about';

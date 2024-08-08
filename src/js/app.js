@@ -109,18 +109,18 @@ if (heroCards.length > 0) {
     })
 }
 
-const newsletterDialog = document.querySelector('.newsletter')
+const modal = document.querySelector('.modal')
 
-if (newsletterDialog) {
-    const newsletterClose = newsletterDialog.querySelector('.newsletter__close')
-    const newsletterButton = document.querySelector('.newsletter__button')
+if (modal) {
+    const modalClose = modal.querySelector('.modal__close')
+    const modalButton = document.querySelector('#modal-button')
 
-    newsletterButton.addEventListener('click', () => {
-        newsletterDialog.showModal()
+    modalButton.addEventListener('click', () => {
+        modal.showModal()
     })
 
-    newsletterClose.addEventListener('click', () => {
-        newsletterDialog.close()
+    modalClose.addEventListener('click', () => {
+        modal.close()
     })
 }
 
@@ -162,6 +162,17 @@ function goBackHistory() {
 
 if (backButton) {
     backButton.addEventListener('click', goBackHistory)
+}
+
+const accordionItems = document.querySelectorAll('.accordion-item')
+
+if (accordionItems) {
+    accordionItems.forEach(item => {
+        const expander = item.querySelector('.accordion-header')
+        expander.addEventListener('click', () => {
+            item.dataset.expanded = item.dataset.expanded === 'true' ? 'false' : 'true'
+        })
+    })
 }
 
 // let sliderTemplate = new Swiper('.slider', {

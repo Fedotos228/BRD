@@ -130,21 +130,25 @@
     gap: 30px;
   }
   &__body {
-    .section-title {
-      width: fit-content;
-      h4 {
-        border-right: 1px solid $lines;
-        padding-right: 16px;
-      }
+  }
+  &__title {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+    h4 {
+      border-right: 1px solid $lines;
+      padding-right: 16px;
+    }
+    i {
+      transition: .3s;
+      color: $dark500
+    }
+    &:hover {
       i {
-        transition: .3s;
-        color: $dark500
-      }
-      &:hover {
-        i {
-          transform: translateX(12px);
-          color: $oxford;
-        }
+        transform: translateX(12px);
+        color: $oxford;
       }
     }
   }

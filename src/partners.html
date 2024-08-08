@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': ''})
+
+<body>
+  <!-- @@include('./components/header.html') -->
+  <main>
+    <div class="__container page-grid">
+      @@include('./components/aside-menu.html')
+      <div class='partners'>
+        <div class="page-title">
+          <h4>Partenerii noștri</h4>
+        </div>
+        <div class='partners-list'>
+          <div class="partners-item">
+            <img src="img/logos/undp.png" alt="">
+            <div class='partners-item__details'>
+              <h4>PNUD Moldova</h4>
+              <a href="https://www.undp.org/ro/moldova">https://www.undp.org/ro/moldova</a>
+            </div>
+          </div>
+          <div class="partners-item">
+            <img src="img/logos/giz.png" alt="">
+            <div class='partners-item__details'>
+              <h4>GIZ</h4>
+              <a href="https://www.giz.de/en/worldwide/67751.html">https://www.giz.de/en/worldwide/67751.html</a>
+            </div>
+          </div>
+          <div class="partners-item">
+            <img src="img/logos/oim.png" alt="">
+            <div class='partners-item__details'>
+              <h4>OIM</h4>
+              <a href="https://moldova.iom.int/ro/oim-moldova">https://moldova.iom.int/ro/oim-moldova</a>
+            </div>
+          </div>
+          <div class="partners-item">
+            <img src="img/logos/sdc.png" alt="">
+            <div class='partners-item__details'>
+              <h4>SDC</h4>
+              <a
+                href="https://www.eda.admin.ch/countries/moldova/en/home/representations/cooperation-office.html">https://www.eda.admin.ch/countries/moldova/en/home/representations/cooperation-office.html</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('./components/footer.html')
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
