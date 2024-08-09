@@ -1,5 +1,5 @@
 .header {
-	background-color: #FFF;
+	background-color: #fff;
 	&.sticky {
 		position: fixed;
 		width: 100%;
@@ -23,17 +23,26 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 20px 0;
+		@include adaptiv-value('padding-top', 20, 12, 1);
+		@include adaptiv-value('padding-bottom', 20, 12, 1);
 	}
 	.header__left {
 		display: flex;
 		align-items: center;
-		gap: 32px;
+		@include adaptiv-value('gap', 32, 16, 1);
+	}
+	.logo {
+		@include adaptiv-value('max-width', 98, 82, 1);
 	}
 	.header__logo {
 		display: flex;
 		align-items: center;
 		gap: 15px;
+		@media (max-width: $mobile) {
+			h4 {
+				display: none;
+			}
+		}
 	}
 	.header__right {
 		display: flex;
@@ -105,6 +114,9 @@
 
 	.header-nav {
 		background-color: $oxford;
+		@media (max-width: 1110px) {
+			display: none;
+		}
 		&__list {
 			display: flex;
 			align-items: center;
@@ -145,7 +157,7 @@
 					color: #fff;
 					padding-top: 16px;
 					padding-bottom: 16px;
-					@include adaptiv-value("padding-inline", 16, 1, 1);
+					@include adaptiv-value('padding-inline', 16, 1, 1);
 					font-size: 16px;
 					font-weight: 500;
 					white-space: nowrap;
@@ -194,13 +206,28 @@
 			}
 		}
 	}
+
+	.burger {
+		z-index: 1001;
+	}
+
+	.header__nav--mobile {
+		background-color: #fff;
+		position: fixed;
+		max-width: 70%;
+		z-index: 1000;
+		right: -70%;
+		width: 100%;
+		bottom: 0;
+		top: 0;
+	}
 }
 
 @keyframes fixedHeader {
-    from {
-        transform: translateY(-50px);
-    }
-    to {
-        transform: translateY(0);
-    }
+	from {
+		transform: translateY(-50px);
+	}
+	to {
+		transform: translateY(0);
+	}
 }

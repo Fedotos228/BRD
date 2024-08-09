@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
@@ -10,11 +10,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
-<body>
+	<body>
+		<header class="header">
+  <div class="band"></div>
+  <div class='header__container'>
+    <div class='header__upper'>
+      <div class='header__left'>
+        <img src="img/logos/gov.png" alt="gov" class='logo'>
+        <a href='/' class='header__logo'>
+          <img src="img/logos/logo.svg" alt="Logo" class='logo'>
+          <h4>Biroul Relații <br /> cu Diaspora</h4>
+        </a>
+      </div>
+      <div class='header__right'>
+        <form action="#" class='header__search search'>
+          <input type="text">
+          <button type='button' class='header__search-button'>
+            <img src="img/icons/search.svg" alt="search">
+          </button>
+        </form>
+        <div class='languages dropdown' data-dropdown>
+          <button type='button' class='dropdown-button' data-dropdown-button>
+            <img src="img/icons/globe.svg" alt="glove">
+          </button>
+          <ul class='languages-list dropdown-menu'>
+            <li class='languages-list__item current'>
+              <button>
+                <img src="img/icons/ro.svg" alt="ro">
+                <span>Română</span>
+              </button>
+            </li>
+            <li class='languages-list__item'>
+              <button>
+                <img src="img/icons/en.svg" alt="en">
+                <span>English</span>
+              </button>
+            </li>
+            <li class='languages-list__item'>
+              <button>
+                <img src="img/icons/ru.svg" alt="ru">
+                <span>Русский</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <a href='#' class='button button__azure'>
+          Contactează-ne
+          <img src="img/icons/arrow-up-right.svg" alt="arrow">
+        </a>
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="header-nav header__nav">
+    <ul class='header-nav__list header-nav__container'>
+      <li class='nav-list__item'>
+        <a href="/">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.25 11.9998L11.2045 3.04533C11.6438 2.60599 12.3562 2.60599 12.7955 3.04532L21.75 11.9998M4.5 9.74983V19.8748C4.5 20.4961 5.00368 20.9998 5.625 20.9998H9.75V16.1248C9.75 15.5035 10.2537 14.9998 10.875 14.9998H13.125C13.7463 14.9998 14.25 15.5035 14.25 16.1248V20.9998H18.375C18.9963 20.9998 19.5 20.4962 19.5 19.8748V9.74983M8.25 20.9998H16.5"
+              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </a>
+      </li>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          BRD
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+        <ul class="submenu">
+          <li class='submenu__item'>
+            <a href="#">Despre noi</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Echipa</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Funcții vacante</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Rapoarte</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Contactează-ne</a>
+          </li>
+        </ul>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Transparență
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Implică-te
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Revenire
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Comunicare și Media
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Istorii de succes
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Informații utile
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="header__nav--mobile">
+	<ul class='header-nav__list header-nav__container'>
+		<li class='nav-list__item'>
+		  <a href="/">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			  <path
+				d="M2.25 11.9998L11.2045 3.04533C11.6438 2.60599 12.3562 2.60599 12.7955 3.04532L21.75 11.9998M4.5 9.74983V19.8748C4.5 20.4961 5.00368 20.9998 5.625 20.9998H9.75V16.1248C9.75 15.5035 10.2537 14.9998 10.875 14.9998H13.125C13.7463 14.9998 14.25 15.5035 14.25 16.1248V20.9998H18.375C18.9963 20.9998 19.5 20.4962 19.5 19.8748V9.74983M8.25 20.9998H16.5"
+				stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
   
-  <main>
-    <div class="__container page-grid">
-      <aside class="aside-menu">
+		  </a>
+		</li>
+		</li>
+		<li class='nav-list__item'>
+		  <a href="#">
+			BRD
+			<img src="img/icons/chevron-down.svg" alt="chevron-down">
+		  </a>
+		  <ul class="submenu">
+			<li class='submenu__item'>
+			  <a href="#">Despre noi</a>
+			</li>
+			<li class='submenu__item'>
+			  <a href="#">Echipa</a>
+			</li>
+			<li class='submenu__item'>
+			  <a href="#">Funcții vacante</a>
+			</li>
+			<li class='submenu__item'>
+			  <a href="#">Rapoarte</a>
+			</li>
+			<li class='submenu__item'>
+			  <a href="#">Contactează-ne</a>
+			</li>
+		  </ul>
+		</li>
+		<li class='nav-list__item'>
+		  <a href="#">
+			Transparență
+			<img src="img/icons/chevron-down.svg" alt="chevron-down">
+		  </a>
+		</li>
+		<li class='nav-list__item'>
+		  <a href="#">
+			Implică-te
+			<img src="img/icons/chevron-down.svg" alt="chevron-down">
+		  </a>
+		</li>
+		<li class='nav-list__item'>
+		  <a href="#">
+			Revenire
+			<img src="img/icons/chevron-down.svg" alt="chevron-down">
+		  </a>
+		</li>
+		<li class='nav-list__item'>
+		  <a href="#">
+			Comunicare și Media
+			<img src="img/icons/chevron-down.svg" alt="chevron-down">
+		  </a>
+		</li>
+		<li class='nav-list__item'>
+		  <a href="#">
+			Istorii de succes
+			<img src="img/icons/chevron-down.svg" alt="chevron-down">
+		  </a>
+		</li>
+		<li class='nav-list__item'>
+		  <a href="#">
+			Informații utile
+			<img src="img/icons/chevron-down.svg" alt="chevron-down">
+		  </a>
+		</li>
+	  </ul>
+  </div>
+</header>
+		<main>
+			<div class="__container page-grid">
+				<aside class="aside-menu">
 	<!-- TODO: asta o faci cu js sa se duca inapoi -->
 	<button class="button button__outline" id='back-button'>
 		<i class="icon-arrow-return-left"></i>
@@ -30,60 +232,68 @@
 		</ul>
 	</nav>
 </aside>
-      <div>
-        <div class="page-title">
-          <h4>
-            Donu Violina
-          </h4>
-        </div>
-        <div class='profile'>
-          <div class='profile-main'>
-            <img src="img/images/violina.png" alt="">
-            <ul>
-              <li>
-                <h6>Funcția:</h6>
-                <span>Șef BRD</span>
-              </li>
-              <li>
-                <h6>Telefon:</h6>
-                <span>(+373) 22 250 351</span>
-              </li>
-              <li>
-                <h6>Email:</h6>
-                <span>violina.donu@gov.md</span>
-              </li>
-              <li>
-                <h6>Adresă:</h6>
-                <span>Piața Marii Adunări Naționale 1, Casa Guvernului, biroul 561</span>
-              </li>
-            </ul>
-          </div>
-          <div class="profile-details">
-            <h5>Sarcinile de bază ale funcției:</h5>
-            <ul>
-              <li>
-                Coordonarea procesului de elaborare, evaluare şi monitorizare a politicilor publice în domeniul
-                diaspora, migrație şi dezvoltare de către autoritățile publice centrale și locale;
-              </li>
-              <li>
-                Gestionarea programelor de stat, implementate de Birou, în domeniul diaspora, migrație şi dezvoltare,
-                cooperarea cu donatorii externi și organizațiile internaționale, inclusiv cu reprezentanții misiunilor
-                diplomatice în domeniile de competență;
-              </li>
-              <li>
-                Coordonarea procesului de acordare a asistenței necesare Prim-ministrului și conducerii Cancelariei de
-                Stat în domeniul relațiilor cu diaspora;
-              </li>
-              <li>
-                Asigurarea managementului Biroului.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer class="footer">
+				<div>
+					<div class="page-title">
+						<h4>Donu Violina</h4>
+					</div>
+					<div class="profile">
+						<div class="profile-main">
+							<img src="img/images/violina.png" alt="" />
+							<ul>
+								<li>
+									<h6>Funcția:</h6>
+									<span>Șef BRD</span>
+								</li>
+								<li>
+									<h6>Telefon:</h6>
+									<span>(+373) 22 250 351</span>
+								</li>
+								<li>
+									<h6>Email:</h6>
+									<span>violina.donu@gov.md</span>
+								</li>
+								<li>
+									<h6>Adresă:</h6>
+									<span
+										>Piața Marii Adunări Naționale 1, Casa
+										Guvernului, biroul 561</span
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="profile-details">
+							<h5>Sarcinile de bază ale funcției:</h5>
+							<ul>
+								<li>
+									Coordonarea procesului de elaborare,
+									evaluare şi monitorizare a politicilor
+									publice în domeniul diaspora, migrație şi
+									dezvoltare de către autoritățile publice
+									centrale și locale;
+								</li>
+								<li>
+									Gestionarea programelor de stat,
+									implementate de Birou, în domeniul diaspora,
+									migrație şi dezvoltare, cooperarea cu
+									donatorii externi și organizațiile
+									internaționale, inclusiv cu reprezentanții
+									misiunilor diplomatice în domeniile de
+									competență;
+								</li>
+								<li>
+									Coordonarea procesului de acordare a
+									asistenței necesare Prim-ministrului și
+									conducerii Cancelariei de Stat în domeniul
+									relațiilor cu diaspora;
+								</li>
+								<li>Asigurarea managementului Biroului.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
   <div class="footer__container">
     <div class="footer__nav">
       <div class="footer__column">
@@ -278,11 +488,13 @@
     </div>
   </div>
 </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
-    integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/app.min.js"></script>
-</body>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+			integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="js/app.min.js"></script>
+	</body>
 </html>
