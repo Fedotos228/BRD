@@ -426,7 +426,7 @@ h2 {
 @media (max-width: 1290px) {
   h2 {
     font-size: calc(
-                24px + 12 * ((100vw - 320px) / 970)
+                22px + 14 * ((100vw - 320px) / 970)
             );
   }
 }
@@ -466,7 +466,7 @@ h6 {
   line-height: 28px;
 }
 
-.h7 {
+strong {
   font-size: 16px;
   font-weight: 500;
 }
@@ -1817,7 +1817,7 @@ aside.aside-menu .aside-menu__navigation ul li a:hover {
   padding-bottom: 12px;
   margin-bottom: 12px;
 }
-.accordion-body .accordion-associates__body .h7 {
+.accordion-body .accordion-associates__body strong {
   color: #232323;
 }
 .accordion-body .accordion-associates__body p, .accordion-body .accordion-associates__body a {
