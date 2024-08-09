@@ -126,11 +126,11 @@ if (modal) {
 
 const counters = document.querySelectorAll('.statistics-item span')
 const statistics = document.querySelector('.statistics')
-const speed = 500
+const speed = 1500
 
 if (statistics) {
     window.addEventListener('scroll', () => {
-        const statisticPos = statistics.offsetTop
+        const statisticPos = statistics.offsetTop - 200
         const scrollPos = window.scrollY
 
         if (scrollPos >= statisticPos - 300) {

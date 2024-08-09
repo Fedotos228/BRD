@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  height: 250px;
+  min-height: 250px;
   border-radius: 8px;
   &:hover {
     .card-button {
