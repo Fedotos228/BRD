@@ -24,10 +24,16 @@ h5 {
 h6 {
 	font-size: 18px;
 	font-weight: 500;
+	line-height: 28px;
+}
+
+.h7 {
+	font-size: 16px;
+	font-weight: 500;
 }
 
 p {
-
+	line-height: 22px;
 }
 
 main {
@@ -48,6 +54,11 @@ main {
 	&--active {
 		display: block;
 	}
+}
+
+.border-rounded {
+	border: 1px solid $lines;
+	border-radius: 8px;
 }
 
 .search {
@@ -71,19 +82,15 @@ main {
 	&:hover {
 		border-color: $azure
 	}
+	&-posts {
+		margin: 50px auto;
+	}
 }
 
 input {
 	width: 100%;
 	outline: none;
 	border: none
-}
-
-.section-title {
-	margin-bottom: 20px;
-	display: flex;
-	align-items: center;
-	gap: 16px;
 }
 
 .media-item {
@@ -181,7 +188,15 @@ input {
 	}
 }
 
-.newsletter {
+.section-title {
+	border-width: 1px 0 1px 0;
+	border-style: solid;
+	border-color: $lines;
+	padding: 24px;
+	background-color: #FAFAFA;
+}
+
+.modal {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -390,6 +405,102 @@ input {
 				color: $azure;
 				text-decoration: underline;
 			}
+		}
+	}
+}
+
+.search-results__title {
+	background-color: rgba(242, 245, 247, 1);
+	padding: 50px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5px;
+	p {
+		span {
+			color: $azure;
+		}
+	}
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 10px;
+	padding: 24px;
+	&-item {
+		height: 220px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&.video {
+			position: relative;
+			i{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 24px;
+				color: #FFF;
+			}
+			&::before{
+				content: "";
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+}
+
+.single-page-links {
+	border-radius: 0;
+	margin: 0;
+	border-width: 0;
+	.links-item {
+		&:last-child{
+			border-bottom-width: 0px;
+		}
+	}
+}
+
+.not-found {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	@include adaptiv-value("padding-top", 60, 30, 1);
+	@include adaptiv-value("padding-bottom", 60, 30, 1);
+	@media (max-width: $tablet) {
+		flex-direction: column-reverse;
+	}
+	img {
+		width: 100%;
+		max-width: 610px;
+	}
+	&__body {
+		p{
+			color: $dark700;
+			margin-top: 8px;
+			margin-bottom: 24px;
+		}
+		a{
+			display: block;
+			color: $oxford;
+			text-decoration: underline;
+			margin-bottom: 10px;
+			&:hover {
+				color: $azure;
+			}
+		}
+		button {
+			max-width: 210px;
+			margin-top: 24px;
 		}
 	}
 }

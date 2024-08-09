@@ -1,0 +1,31 @@
+.program-single {
+  &__body {
+    border: 1px solid $lines;
+    border-radius: 8px;
+  }
+  &__thumbnail{
+    display: block;
+    width: fit-content;
+    
+    max-height: 600px;
+    margin: 0 auto;
+    padding: 24px;
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
+  }
+  &__content {
+    border-top: 1px solid $lines;
+    padding: 24px;
+    p{
+      color: $dark700;
+      &:not(:last-child){
+        margin-bottom: 24px;
+      }
+    }
+    a {
+      color: $azure;
+      text-decoration: underline;
+    }
+  }
+}

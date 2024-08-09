@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': 'Unitate de suport la revenire'})
+
+<body>
+  @@include('./components/header.html')
+  <main>
+    <div class="__container page-grid">
+      @@include('./components/aside-menu.html')
+      <div class='support'>
+        <div class="support__intro"
+          style='background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("@img/card.jpeg") 50% 50% / cover no-repeat'>
+          <h4>Vă ajutăm să reveniți în Moldova!</h4>
+          <button class="button button__yellow" id='modal-button'>
+            Completează formular
+          </button>
+        </div>
+        <div class='support-body'>
+          <div class='support-body__desc'>
+            <p>Și în acest an așteptăm moldovenii din toate țările lumii să vină acasă pentru a celebra bucuria de a fi
+              împreună, dar și a descoperi oportunitățile de dezvoltare.</p>
+            <p>Astfel, în data de 18 august organizăm „Congresul Diasporei”, aflat la a 10-a ediție, care va oferi
+              conaționalilor oportunitatea de a interacționa cu autoritățile publice, dar și a explora servicii și
+              programe guvernamentale.</p>
+
+            <p>Iar a doua zi, pe 19 august, așteptăm toți antreprenorii și doritorii de a investi la „Diaspora Business
+              Forum”, unde vor descoperi tendințele economice și oportunitățile investiționale din Republica Moldova.
+            </p>
+
+            <p>Zilele Diasporei sunt organizate cu suportul proiectului „Fondul de Consiliere în Politici”, finanțat de
+              Ministerul Federal German pentru Cooperare Economică și Dezvoltare (BMZ) și implementat de Agenția de
+              Cooperare Internațională a Germaniei (GIZ) în Moldova.
+            </p>
+          </div>
+          <div class="section-title">
+            <h6>
+              Contactet:
+            </h6>
+          </div>
+          <div class="support-body__contacts">
+            <div>
+              <h6>Telefon</h6>
+              <ul>
+                <li>
+                  <a href="tel:(022) 250-350">(022) 250-350</a>
+                </li>
+                <li>
+                  <a href="tel:(022) 250-239">Comunicare - (022) 250-239</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h6>Email:</h6>
+              <ul>
+                <li>
+                  <a href="mailto:brd@gov.md">brd@gov.md</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class='section-title'>
+            <h6>Întrebări și răspunsuri:</h6>
+          </div>
+          <div class="accordion">
+            @@include('./components/accordion.html')
+            @@include('./components/accordion.html')
+            @@include('./components/accordion.html')
+            @@include('./components/accordion.html')
+            @@include('./components/accordion.html')
+          </div>
+        </div>
+      </div>
+  </main>
+  @@include('./components/footer.html')
+  @@include('./components/contact-modal.html')
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+.support{
+  &__intro {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    h4{
+      color: #FFF;
+    }
+    button {
+      width: 230px;
+    }
+  }
+  &-body {
+    margin-top: 10px;
+    border: 1px solid $lines;
+    border-radius: 8px;
+    &__desc {
+      padding: 24px;
+      p {
+        color: $dark700;
+        line-height: 24px;
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+    &__contacts {
+      display: flex;
+      align-items: center;
+      @include adaptiv-value("gap", 100, 30, 1);
+      padding: 24px;
+      > div {
+        h6 {
+          color: $oxford;
+          margin-bottom: 8px;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.associates {
+  .map {
+    border: 1px solid $lines;
+    padding: 24px 40px;
+    border-radius: 8px;
+    img {
+      width: 100%;
+    }
+  }
+  &-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+    align-items: baseline;
+    gap: 10px;
+    .accordion-item {
+      flex: 475px 0 0 ;
+      margin-bottom: 0;
+    }
+  }
+}
