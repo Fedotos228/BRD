@@ -956,8 +956,14 @@ input {
   }
 }
 .not-found img {
-  width: 100%;
-  max-width: 610px;
+  width: 610px;
+}
+@media (max-width: 1290px) {
+  .not-found img {
+    width: calc(
+                300px + 310 * ((100vw - 320px) / 970)
+            );
+  }
 }
 .not-found__body p {
   color: rgba(35, 35, 35, 0.7);
@@ -968,14 +974,19 @@ input {
   display: block;
   color: #07214d;
   text-decoration: underline;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .not-found__body a:hover {
   color: #5182f6;
 }
-.not-found__body button {
+.not-found__body .button {
+  display: flex;
   max-width: 210px;
   margin-top: 24px;
+  text-decoration: none;
+}
+.not-found__body .button:hover {
+  color: #FFF;
 }
 
 .footer {
