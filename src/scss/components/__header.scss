@@ -206,11 +206,15 @@
 		max-width: 70%;
 		z-index: 1000;
 		width: 100%;
+		right: -70%;
 		bottom: 0;
 		top: 0;
-		right: -70%;
 		&.active {
 			right: 0;
+		}
+		@media (max-width: $mobileMedium) {
+			max-width: 85%;
+			right: -85%;
 		}
 		.header-nav__list {
 			padding: 0;

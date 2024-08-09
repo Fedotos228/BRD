@@ -1355,12 +1355,18 @@ input {
   max-width: 70%;
   z-index: 1000;
   width: 100%;
+  right: -70%;
   bottom: 0;
   top: 0;
-  right: -70%;
 }
 .header .header__nav--mobile.active {
   right: 0;
+}
+@media (max-width: 39.99875rem) {
+  .header .header__nav--mobile {
+    max-width: 85%;
+    right: -85%;
+  }
 }
 .header .header__nav--mobile .header-nav__list {
   padding: 0;
