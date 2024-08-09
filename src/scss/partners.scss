@@ -1,0 +1,31 @@
+.partners {
+  &-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid $lines;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    img {
+      @include adaptiv-value("width", 300, 100, 1);
+      padding: 24px;
+      border-right: 1px solid $lines;
+    }
+    &__details {
+      flex: 1;
+      padding: 24px;
+      h4 {
+        margin-bottom: 5px;
+      }
+      a {
+        display: block;
+        color: $oxford;
+        text-decoration: underline;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+        display:block;
+      }
+    }
+  }
+}

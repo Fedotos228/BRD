@@ -11,12 +11,141 @@
 </head>
 
 <body>
-  
-  <main class='team'>
-    <div class="team__container page-grid">
+  <header class="header">
+  <div class="band"></div>
+  <div class='header__container'>
+    <div class='header__upper'>
+      <div class='header__left'>
+        <img src="img/logos/gov.png" alt="gov">
+        <a href='/' class='header__logo'>
+          <img src="img/logos/logo.svg" alt="Logo">
+          <h4>Biroul Relații <br /> cu Diaspora</h4>
+        </a>
+      </div>
+      <div class='header__right'>
+        <form action="#" class='header__search search'>
+          <input type="text">
+          <button type='button' class='header__search-button'>
+            <img src="img/icons/search.svg" alt="search">
+          </button>
+        </form>
+        <div class='languages dropdown' data-dropdown>
+          <button type='button' class='dropdown-button' data-dropdown-button>
+            <img src="img/icons/globe.svg" alt="glove">
+          </button>
+          <ul class='languages-list dropdown-menu'>
+            <li class='languages-list__item current'>
+              <button>
+                <img src="img/icons/ro.svg" alt="ro">
+                <span>Română</span>
+              </button>
+            </li>
+            <li class='languages-list__item'>
+              <button>
+                <img src="img/icons/en.svg" alt="en">
+                <span>English</span>
+              </button>
+            </li>
+            <li class='languages-list__item'>
+              <button>
+                <img src="img/icons/ru.svg" alt="ru">
+                <span>Русский</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <a href='#' class='button button__azure'>
+          Contactează-ne
+          <img src="img/icons/arrow-up-right.svg" alt="arrow">
+        </a>
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="header-nav header__nav">
+    <ul class='header-nav__list header-nav__container'>
+      <li class='nav-list__item'>
+        <a href="/">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.25 11.9998L11.2045 3.04533C11.6438 2.60599 12.3562 2.60599 12.7955 3.04532L21.75 11.9998M4.5 9.74983V19.8748C4.5 20.4961 5.00368 20.9998 5.625 20.9998H9.75V16.1248C9.75 15.5035 10.2537 14.9998 10.875 14.9998H13.125C13.7463 14.9998 14.25 15.5035 14.25 16.1248V20.9998H18.375C18.9963 20.9998 19.5 20.4962 19.5 19.8748V9.74983M8.25 20.9998H16.5"
+              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </a>
+      </li>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          BRD
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+        <ul class="submenu">
+          <li class='submenu__item'>
+            <a href="#">Despre noi</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Echipa</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Funcții vacante</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Rapoarte</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Contactează-ne</a>
+          </li>
+        </ul>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Transparență
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Implică-te
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Revenire
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Comunicare și Media
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Istorii de succes
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Informații utile
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+  <main>
+    <div class="__container page-grid">
       <aside class="aside-menu">
 	<!-- TODO: asta o faci cu js sa se duca inapoi -->
-	<button class="button button__outline">Back</button>
+	<button class="button button__outline" id='back-button'>
+		<i class="icon-arrow-return-left"></i>
+	</button>
 
 	<nav class="aside-menu__navigation">
 		<ul>
@@ -28,38 +157,37 @@
 		</ul>
 	</nav>
 </aside>
-
-      <div class='team__body grid'>
-        <div class="team__item">
-          <img src="img/images/team.png" alt="team">
+      <div class='team'>
+        <a href='#' class="team__item">
+          <img src="img/images/violina.png" alt="team">
           <h5>Donu Violina</h5>
           <p>Șef BRD</p>
-        </div>
-        <div class="team__item">
-          <img src="img/images/team.png" alt="team">
+        </a>
+        <a href='#' class="team__item">
+          <img src="img/images/violina.png" alt="team">
           <h5>Donu Violina</h5>
           <p>Șef BRD</p>
-        </div>
-        <div class="team__item">
-          <img src="img/images/team.png" alt="team">
+        </a>
+        <a href='#' class="team__item">
+          <img src="img/images/violina.png" alt="team">
           <h5>Donu Violina</h5>
           <p>Șef BRD</p>
-        </div>
-        <div class="team__item">
-          <img src="img/images/team.png" alt="team">
+        </a>
+        <a href='#' class="team__item">
+          <img src="img/images/violina.png" alt="team">
           <h5>Donu Violina</h5>
           <p>Șef BRD</p>
-        </div>
-        <div class="team__item">
-          <img src="img/images/team.png" alt="team">
+        </a>
+        <a href='#' class="team__item">
+          <img src="img/images/violina.png" alt="team">
           <h5>Donu Violina</h5>
           <p>Șef BRD</p>
-        </div>
-        <div class="team__item">
-          <img src="img/images/team.png" alt="team">
+        </a>
+        <a href='#' class="team__item">
+          <img src="img/images/violina.png" alt="team">
           <h5>Donu Violina</h5>
           <p>Șef BRD</p>
-        </div>
+        </a>
       </div>
     </div>
   </main>

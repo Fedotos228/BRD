@@ -12,10 +12,10 @@
 						<div class="hero-slider__slider">
 							<div class="slider-hero__body swiper">
 								<a href='#' class="slider-hero__slide">
-									<div class='slider-hero__slid§e--image'
-										style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000000 100%), url('@img/hero.png') 50% 50% / cover no-repeat;"
-										onmouseover='liniarChanger(this, "@img/hero.png")'
-										onmouseout='liniarChangerOut(this, "@img/hero.png")'>
+									<div class='slider-hero__slide--image'
+										style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url('@img/hero.jpeg') 50% 50% / cover no-repeat;"
+										onmouseover='liniarChanger(this, "@img/hero.jpeg")'
+										onmouseout='liniarChangerOut(this, "@img/hero.jpeg")'>
 									</div>
 									<div class='slider-hero__slide--body'>
 										<div class='hero__details'>
@@ -31,9 +31,9 @@
 								</a>
 								<a href='#' class="slider-hero__slide">
 									<div class='slider-hero__slide--image'
-										style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000000 100%), url('@img/hero.png') 50% 50% / cover no-repeat;"
-										onmouseover='liniarChanger(this, "@img/hero.png")'
-										onmouseout='liniarChangerOut(this, "@img/hero.png")'>
+										style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000000 100%), url('@img/hero.jpeg') 50% 50% / cover no-repeat;"
+										onmouseover='liniarChanger(this, "@img/hero.jpeg")'
+										onmouseout='liniarChangerOut(this, "@img/hero.jpeg")'>
 									</div>
 									<div class='slider-hero__slide--body'>
 										<div class='hero__details'>
@@ -88,7 +88,7 @@
 		<section class='media'>
 			<div class="media__container">
 				<div class='media__body'>
-					<a href='#' class='section-title'>
+					<a href='#' class='media__title'>
 						<h4>Media</h4>
 						<i class='icon-arrow-right'></i>
 					</a>
@@ -100,45 +100,45 @@
 						@@include('./components/article.html')
 					</div>
 				</div>
-				<aside class='links'>
+				<aside class='aside-links'>
 					<h4>Link-uri</h4>
-					<a href="#" class='links-item'>
+					<a href="#" class='aside-links__item' data-icon>
 						<i></i>
 						<p>Profesioniști din Diasporă pentru Dezvoltare</p>
 					</a>
-					<a href="#" class='links-item'>
+					<a href="#" class='aside-links__item' data-icon>
 						<i></i>
 						<p>Istorii de succes</p>
 					</a>
-					<a href="#" class='links-item'>
+					<a href="#" class='aside-links__item' data-icon>
 						<i></i>
 						<p>Despre tabara DOR</p>
 					</a>
-					<a href="#" class='links-item'>
+					<a href="#" class='aside-links__item' data-icon>
 						<i></i>
 						<p>Diaspora acasă reușește</p>
 					</a>
-					<a href="#" class='links-item'>
+					<a href="#" class='aside-links__item' data-icon>
 						<i></i>
 						<p>Diaspora engagement hub</p>
 					</a>
-					<a href="emoldovata.gov.xlsx" class='links-item'>
+					<a href="emoldovata.gov.xlsx" class='aside-links__item' data-icon>
 						<i></i>
 						<p>emoldovata.gov.md</p>
 					</a>
-					<a href="moldova.md" class='links-item'>
+					<a href="moldova.md" class='aside-links__item' data-icon>
 						<i></i>
 						<p>moldova.md</p>
 					</a>
-					<a href="presedinte.pdf" class='links-item'>
+					<a href="presedinte.pdf" class='aside-links__item' data-icon>
 						<i></i>
 						<p>presedinte.md</p>
 					</a>
-					<a href="cna.docx" class='links-item'>
+					<a href="cna.docx" class='aside-links__item' data-icon>
 						<i></i>
 						<p>cna.md</p>
 					</a>
-					<button class='button button__yellow newsletter__button'>
+					<button class='button button__yellow' id='modal-button'>
 						Abonează-te la newsletter
 						<i class='icon-bell'></i>
 					</button>

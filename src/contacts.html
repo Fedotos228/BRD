@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': 'Contacte'})
+
+<body>
+  @@include('./components/header.html')
+  <main>
+    <div class="__container page-grid">
+      @@include('./components/aside-menu.html')
+      <div class='contact'>
+        <div class='contact__map'>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1054.0129225276855!2d28.831927766698634!3d47.02442485887942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c339ab76ad3%3A0x3448a02116d3cd16!2sGovernment%20House%20of%20Moldova!5e0!3m2!1sen!2s!4v1722939887295!5m2!1sen!2s"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class='contact-details'>
+          <div class="contact-details__block">
+            <h6>Ne aflăm pe strada:</h6>
+            <ul>
+              <li>Piața Marii Adunări Naționale, nr. 1</li>
+              <li>Casa Guvernului, etajul 5</li>
+              <li>Birourile 559, 561, 564, 566</li>
+            </ul>
+          </div>
+          <div class="contact-details__block">
+            <h6>Email:</h6>
+            <ul>
+              <li>
+                <a href="mailto:brd@gov.md">brd@gov.md</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-details__block">
+            <h6>Telefon:</h6>
+            <ul>
+              <li>
+                <a href="tel:(022) 250-350">(022) 250-350</a>
+              </li>
+              <li>Comunicare - <a href="tel:(022) 250-239">(022) 250-239</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include('./components/footer.html')
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

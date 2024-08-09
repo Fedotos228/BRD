@@ -8,7 +8,7 @@ const header = document.querySelector('.header')
 const burger = document.querySelector('.burger')
 const menu = document.querySelector('.header__nav')
 const headerSearch = document.querySelector('.header__search')
-const linkItem = document.querySelectorAll('.links-item')
+const linkItem = document.querySelectorAll('[data-icon]')
 const heroCards = document.querySelectorAll('.hero-cards__item')
 
 if (burger && menu) {
@@ -37,10 +37,10 @@ if (headerSearch) {
 
 new Swiper('.slider-hero__body', {
     effect: 'fade',
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
     observer: true,
     observeParents: true,
     slidesPerView: 1,
@@ -109,24 +109,24 @@ if (heroCards.length > 0) {
     })
 }
 
-const newsletterDialog = document.querySelector('.newsletter')
+const modal = document.querySelector('.modal')
 
-if (newsletterDialog) {
-    const newsletterClose = newsletterDialog.querySelector('.newsletter__close')
-    const newsletterButton = document.querySelector('.newsletter__button')
+if (modal) {
+    const modalClose = modal.querySelector('.modal__close')
+    const modalButton = document.querySelector('#modal-button')
 
-    newsletterButton.addEventListener('click', () => {
-        newsletterDialog.showModal()
+    modalButton.addEventListener('click', () => {
+        modal.showModal()
     })
 
-    newsletterClose.addEventListener('click', () => {
-        newsletterDialog.close()
+    modalClose.addEventListener('click', () => {
+        modal.close()
     })
 }
 
 const counters = document.querySelectorAll('.statistics-item span')
 const statistics = document.querySelector('.statistics')
-const speed = 100
+const speed = 500
 
 if (statistics) {
     window.addEventListener('scroll', () => {
@@ -151,6 +151,27 @@ if (statistics) {
                 animate()
             })
         }
+    })
+}
+
+const backButton = document.querySelector('#back-button')
+
+function goBackHistory() {
+    window.history.back()
+}
+
+if (backButton) {
+    backButton.addEventListener('click', goBackHistory)
+}
+
+const accordionItems = document.querySelectorAll('.accordion-item')
+
+if (accordionItems) {
+    accordionItems.forEach(item => {
+        const expander = item.querySelector('.accordion-header')
+        expander.addEventListener('click', () => {
+            item.dataset.expanded = item.dataset.expanded === 'true' ? 'false' : 'true'
+        })
     })
 }
 

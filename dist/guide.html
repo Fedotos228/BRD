@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+  <header class="header">
+  <div class="band"></div>
+  <div class='header__container'>
+    <div class='header__upper'>
+      <div class='header__left'>
+        <img src="img/logos/gov.png" alt="gov">
+        <a href='/' class='header__logo'>
+          <img src="img/logos/logo.svg" alt="Logo">
+          <h4>Biroul Relații <br /> cu Diaspora</h4>
+        </a>
+      </div>
+      <div class='header__right'>
+        <form action="#" class='header__search search'>
+          <input type="text">
+          <button type='button' class='header__search-button'>
+            <img src="img/icons/search.svg" alt="search">
+          </button>
+        </form>
+        <div class='languages dropdown' data-dropdown>
+          <button type='button' class='dropdown-button' data-dropdown-button>
+            <img src="img/icons/globe.svg" alt="glove">
+          </button>
+          <ul class='languages-list dropdown-menu'>
+            <li class='languages-list__item current'>
+              <button>
+                <img src="img/icons/ro.svg" alt="ro">
+                <span>Română</span>
+              </button>
+            </li>
+            <li class='languages-list__item'>
+              <button>
+                <img src="img/icons/en.svg" alt="en">
+                <span>English</span>
+              </button>
+            </li>
+            <li class='languages-list__item'>
+              <button>
+                <img src="img/icons/ru.svg" alt="ru">
+                <span>Русский</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <a href='#' class='button button__azure'>
+          Contactează-ne
+          <img src="img/icons/arrow-up-right.svg" alt="arrow">
+        </a>
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="header-nav header__nav">
+    <ul class='header-nav__list header-nav__container'>
+      <li class='nav-list__item'>
+        <a href="/">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.25 11.9998L11.2045 3.04533C11.6438 2.60599 12.3562 2.60599 12.7955 3.04532L21.75 11.9998M4.5 9.74983V19.8748C4.5 20.4961 5.00368 20.9998 5.625 20.9998H9.75V16.1248C9.75 15.5035 10.2537 14.9998 10.875 14.9998H13.125C13.7463 14.9998 14.25 15.5035 14.25 16.1248V20.9998H18.375C18.9963 20.9998 19.5 20.4962 19.5 19.8748V9.74983M8.25 20.9998H16.5"
+              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </a>
+      </li>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          BRD
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+        <ul class="submenu">
+          <li class='submenu__item'>
+            <a href="#">Despre noi</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Echipa</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Funcții vacante</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Rapoarte</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Contactează-ne</a>
+          </li>
+        </ul>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Transparență
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Implică-te
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Revenire
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Comunicare și Media
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Istorii de succes
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Informații utile
+          <img src="img/icons/chevron-down.svg" alt="chevron-down">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+  <main>
+    <div class="__container page-grid">
+      <aside class="aside-menu">
+	<!-- TODO: asta o faci cu js sa se duca inapoi -->
+	<button class="button button__outline" id='back-button'>
+		<i class="icon-arrow-return-left"></i>
+	</button>
+
+	<nav class="aside-menu__navigation">
+		<ul>
+			<li><a href="#">Despre noi</a></li>
+			<li><a href="#">Echipa</a></li>
+			<li><a href="#">Funcții vacante</a></li>
+			<li><a href="#">Rapoarte</a></li>
+			<li><a href="#">Contactează-ne</a></li>
+		</ul>
+	</nav>
+</aside>
+      <div class='guide-cards'>
+        <a href='#' class='guide-card'
+  style='background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/card.jpeg") 50% 50% / cover no-repeat'>
+  <h4>Informație practică</h4>
+</a>
+        <a href='#' class='guide-card'
+  style='background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/card.jpeg") 50% 50% / cover no-repeat'>
+  <h4>Informație practică</h4>
+</a>
+        <a href='#' class='guide-card'
+  style='background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/card.jpeg") 50% 50% / cover no-repeat'>
+  <h4>Informație practică</h4>
+</a>
+        <a href='#' class='guide-card'
+  style='background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/card.jpeg") 50% 50% / cover no-repeat'>
+  <h4>Informație practică</h4>
+</a>
+        <a href='#' class='guide-card'
+  style='background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/card.jpeg") 50% 50% / cover no-repeat'>
+  <h4>Informație practică</h4>
+</a>
+        <a href='#' class='guide-card'
+  style='background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/card.jpeg") 50% 50% / cover no-repeat'>
+  <h4>Informație practică</h4>
+</a>
+        <a href='#' class='guide-card'
+  style='background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/card.jpeg") 50% 50% / cover no-repeat'>
+  <h4>Informație practică</h4>
+</a>
+        <a href='#' class='guide-card'
+  style='background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/card.jpeg") 50% 50% / cover no-repeat'>
+  <h4>Informație practică</h4>
+</a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+  <div class="footer__container">
+    <div class="footer__nav">
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>BRD:</p>
+          <ul>
+            <li>
+              <a href="#">Despre noi</a>
+            </li>
+            <li>
+              <a href="#">Echipa</a>
+            </li>
+            <li>
+              <a href="#">Funcții vacante</a>
+            </li>
+            <li>
+              <a href="#">Rapoarte</a>
+            </li>
+            <li>
+              <a href="#">Contactează-ne</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list">
+          <p>Transparență:</p>
+          <ul>
+            <li>
+              <a href="#">Biroul și Diaspora</a>
+            </li>
+            <li>
+              <a href='#'>Cadrul legislativ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>Implică-te:</p>
+          <ul>
+            <li>
+              <a href="#">Programe</a>
+            </li>
+            <li>
+              <a href="#">Platforma de implicare a experților din diaspora</a>
+            </li>
+            <li>
+              <a href="#">Investește acasă</a>
+            </li>
+            <li>
+              <a href="#">E-learning</a>
+            </li>
+            <li>
+              <a href="#">Implicare în proces decizional</a>
+            </li>
+            <li>
+              <a href="#">Lucrul cu punctele focale Diaspora Migrație Dezvoltare</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>Comunicare și Media:</p>
+          <ul>
+            <li>
+              <a href="#">Media</a>
+            </li>
+            <li>
+              <a href="#">Podcasturi</a>
+            </li>
+            <li>
+              <a href="#">Ghid de identitate vizuală</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list">
+          <p>revenire:</p>
+          <ul>
+            <li>
+              <a href="#">Ghid pentru suport la revenire</a>
+            </li>
+            <li>
+              <a href="#">Unitatea de suport la revenire</a>
+            </li>
+            <li>
+              <a href="#">Istorii de succes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>Informații utile:</p>
+          <ul>
+            <li>
+              <a href="#">Asociații și grupuri în diaspora</a>
+            </li>
+            <li>
+              <a href="#">Centre Educaționale</a>
+            </li>
+            <li>
+              <a href="#">Studiază limba română</a>
+            </li>
+            <li>
+              <a href="#">Platforme media ale diasporei</a>
+            </li>
+            <li>
+              <a href="#">Inițiative din diasporă</a>
+            </li>
+            <li>
+              <a href="#">Studii / Rapoarte / Evaluări</a>
+            </li>
+            <li>
+              <a href="#">Colaborare internațională</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>Rezultate:</p>
+          <ul>
+            <li>
+              <a href="#">Implicarea experților din diaspora</a>
+            </li>
+            <li>
+              <a href="#">Zilele Diasporei</a>
+            </li>
+            <li>
+              <a href="#">Congresul Diasporei</a>
+            </li>
+            <li>
+              <a href="#">Diaspora Business Forum</a>
+            </li>
+            <li>
+              <a href="#">Programe</a>
+            </li>
+            <li>
+              <a href="#">Limba română în diaspora</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>Rețele sociale:</p>
+          <ul class='socials'>
+            <li>
+              <a href="#">
+                <img src="img/icons/insta.svg" alt="insta">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icons/facebook.svg" alt="facebook">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icons/twitter.svg" alt="twitter">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list">
+          <p>Date de contact:</p>
+          <ul>
+            <li>
+              <a href="#">Piața Marii Adunări Naționale, nr. 1</a>
+            </li>
+            <li>
+              <a href="tel:(022) 250-350">(022) 250-350</a>
+            </li>
+            <li>
+              <a href="tel:(022) 250-351">(022) 250-351</a>
+            </li>
+            <li><a href="mailto:brd@gov.md">brd@gov.md</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="footer__links">
+    <a href="#">gov.md</a>
+    <a href="#">cariere.gov.md</a>
+    <a href="#">particip.gov.md</a>
+  </nav>
+  <div class='footer__bottom'>
+    <div class="footer__container">
+      <p class='copyright'>Copyright © 2024. All rights reserved.</p>
+      <p>Guvernul Republicii Moldova. Biroul Relații cu Diaspora</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
