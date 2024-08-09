@@ -2,11 +2,18 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+  flex-wrap: wrap;
 	gap: 10px;
 	padding: 16px;
-  @media (max-width: $mobileMedium) {
-      flex-direction: column;
-      gap: 20px;
+  @media (max-width: 943px) {
+	  justify-content: center;
+    gap: 20px;
+  }
+  @media (max-width: $mobile) {
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 630px) {
+    justify-content: center;
   }
 	&-list{
 		display: flex;
@@ -25,10 +32,14 @@
 		border-color: $lines;
 		border-style: solid;
 		transition: .2s;
-    &.active {
+    &.active, &:hover {
       background-color: $oxford;
       color: #FFF;
       border-color: $oxford;
+    }
+    &.disabled {
+      pointer-events: none;
+      color: $dark500;
     }
 	}
   &__button {

@@ -5,6 +5,9 @@
         font-size: 32px;
       }
     }
+    p {
+      color: $azure;
+    }
   }
   .thumbnail {
     position: relative;
@@ -44,5 +47,6 @@
   }
   p {
     margin-top: 8px;
+    transition: .2s;
   }
 }
