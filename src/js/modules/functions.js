@@ -17,11 +17,42 @@ export function isWebp() {
 }
 
 export function burger(burger, menu, header) {
+	const screenWidth = window.innerWidth
+	const headerRight = header.querySelector('.header__right')
+
+	toggleHeaderRight(headerRight, screenWidth > 1110)
+
+	window.addEventListener('resize', () => {
+		const screenWidth = window.innerWidth
+		toggleHeaderRight(headerRight, screenWidth > 1110)
+	})
+
 	burger.addEventListener('click', () => {
 		burger.classList.toggle('active')
 		menu.classList.toggle('active')
+
+		toggleHeaderRight(headerRight, menu.classList.contains('active'))
+
 		document.body.classList.toggle('lock')
 	})
+}
+
+function toggleHeaderRight(headerRight, condition) {
+	if (condition) {
+		headerRight.style.position = `absolute`
+		headerRight.style.zIndex = '1001'
+		headerRight.style.right = `15px`
+		headerRight.querySelector('.languages').style.display = 'block'
+		headerRight.querySelector('.button.button__azure').style.display =
+			'flex'
+	} else {
+		headerRight.style.position = `relative`
+		headerRight.style.zIndex = '1'
+		headerRight.style.right = `0`
+		headerRight.querySelector('.languages').style.display = 'none'
+		headerRight.querySelector('.button.button__azure').style.display =
+			'none'
+	}
 }
 
 export function fixedHeader(header) {

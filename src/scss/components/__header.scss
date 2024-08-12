@@ -194,12 +194,8 @@
 		}
 	}
 
-	.burger {
-		z-index: 1001;
-	}
-
 	.header__nav--mobile {
-		padding: 90px 12px 12px 12px;
+		padding: 100px 12px 12px 12px;
 		background-color: #fff;
 		transition: 0.3s;
 		position: fixed;
@@ -218,9 +214,15 @@
 			max-width: 85%;
 			right: -85%;
 		}
+
+		@media (max-width: $mobileSmall) {
+			max-width: 100%;
+			right: -100%;
+		}
 		.header-nav__list {
 			padding: 0;
 			margin-top: 16px;
+			max-height: calc(100vh - 48px - 90px - 40px);
 			.nav-list__item {
 				border: 1px solid $lines;
 				border-bottom: none;

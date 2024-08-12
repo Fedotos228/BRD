@@ -1344,11 +1344,8 @@ input {
   visibility: visible;
   pointer-events: all;
 }
-.header .burger {
-  z-index: 1001;
-}
 .header .header__nav--mobile {
-  padding: 90px 12px 12px 12px;
+  padding: 100px 12px 12px 12px;
   background-color: #fff;
   transition: 0.3s;
   position: fixed;
@@ -1369,9 +1366,16 @@ input {
     right: -85%;
   }
 }
+@media (max-width: 29.99875rem) {
+  .header .header__nav--mobile {
+    max-width: 100%;
+    right: -100%;
+  }
+}
 .header .header__nav--mobile .header-nav__list {
   padding: 0;
   margin-top: 16px;
+  max-height: calc(100vh - 48px - 90px - 40px);
 }
 .header .header__nav--mobile .header-nav__list .nav-list__item {
   border: 1px solid #ededed;
@@ -1470,7 +1474,6 @@ input {
     width: 24px;
     height: 20px;
     cursor: pointer;
-    z-index: 5;
   }
   .burger span, .burger::before, .burger::after {
     content: "";
