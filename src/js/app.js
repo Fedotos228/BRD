@@ -81,7 +81,10 @@ function createIcon(icon, type, paths) {
 
 if (linkItem) {
 	linkItem.forEach(item => {
-		const icon = item.querySelector('i')
+		const linkText = item.querySelector('p')
+		const icon = document.createElement('i')
+		item.appendChild(icon)
+		icon.insertAdjacentElement('afterend', linkText)
 		const link = item.getAttribute('href')
 		const extension = link.split('.').pop()
 
