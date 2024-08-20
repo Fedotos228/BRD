@@ -23,8 +23,10 @@ if (document.querySelectorAll('[data-dropdown]')) {
 }
 
 if (headerSearch) {
+	const headerSearchButton = document.querySelector('.header__search-button')
 	document.addEventListener('click', e => {
 		if (e.target.closest('.header__search-button')) {
+			headerSearchButton.setAttribute('type', 'submit')
 			headerSearch.classList.add('active')
 			headerSearch.querySelector('input').focus()
 		}
@@ -34,6 +36,8 @@ if (headerSearch) {
 			!e.target.closest('.header__search-button')
 		) {
 			headerSearch.classList.remove('active')
+			headerSearchButton.setAttribute('type', 'button')
+
 		}
 	})
 }
@@ -84,9 +88,11 @@ if (linkItem) {
 		switch (extension) {
 			case 'pdf':
 				return createIcon(icon, 'pdf', 9)
+			case 'doc':
 			case 'docx':
 				return createIcon(icon, 'docx', 7)
 			case 'xlsx':
+			case 'xlx':
 				return createIcon(icon, 'xlsx', 7)
 			default:
 				icon.classList.add('icon-link')
@@ -178,6 +184,24 @@ if (accordionItems) {
 				item.dataset.expanded === 'true' ? 'false' : 'true'
 		})
 	})
+}
+
+const copyright = document.querySelector('.copyright')
+
+if (copyright) {
+	const currentYear = new Date().getFullYear()
+
+	let textContent = copyright.textContent
+
+	let contentArray = textContent.split(" ")
+
+	contentArray = contentArray.map(word => {
+		return word.includes("{year}.") ? `${currentYear}.` : word
+	})
+
+	let newContent = contentArray.join(" ")
+
+	copyright.textContent = newContent
 }
 
 // let sliderTemplate = new Swiper('.slider', {

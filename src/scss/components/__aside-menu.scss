@@ -6,6 +6,7 @@ aside.aside-menu {
 		overflow: hidden;
 		ul {
 			li {
+				transition: background-color .2s ease-out;
 				&:not(:last-child) {
 					border-bottom: 1px solid $lines;
 				}
@@ -17,6 +18,12 @@ aside.aside-menu {
 					display: block;
 					transition: background-color .2s ease-out;
 					&:hover {
+						background-color: $oxford;
+						color: #fff;
+					}
+				}
+				&.active {
+					a{
 						background-color: $oxford;
 						color: #fff;
 					}
