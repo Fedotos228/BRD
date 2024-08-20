@@ -10,6 +10,9 @@
           .slider-hero__slide {
             position: relative;
             height: 618px;
+            @media (max-width: $tablet) {
+              height: calc(100vh - 300px);
+            }
             border-radius: 8px;
             &--image {
               position: absolute;
@@ -28,8 +31,8 @@
             }
             &--body{
               position: absolute;
-              bottom: 55px;
-              left: 55px;
+              @include adaptiv-value("padding", 55, 15, 1);
+              bottom: 0;
               .hero__details{
                 display: flex;
                 align-items: center;
@@ -38,7 +41,7 @@
                 time {
                   color: $white800
                 }
-                span {
+                span, a {
                   color: #FFF;
                 }
               }
@@ -68,11 +71,11 @@
               border-radius: 8px;
               transition: .3s;
               &__prev {
-              }
-              &__next {
                 i {
                   transform: rotate(180deg);
                 }
+              }
+              &__next {
               }
               &:hover {
                 background-color: #FFFFFF;
@@ -88,9 +91,17 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 30px;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: 1fr;
+    }
     &__item {
       display: flex;
       align-items: center;
+      @media (max-width: $tablet) {
+      }
       gap: 12px;
       padding: 30px 12px;
       border: 1px solid $lines;
@@ -109,6 +120,9 @@
     display: grid;
     grid-template-columns: 1fr 300px;
     gap: 30px;
+    @media (max-width: $mobileMedium) {
+      grid-template-columns: 1fr;
+    }
   }
   &__grid {
     display: grid;
@@ -116,21 +130,25 @@
     gap: 30px;
   }
   &__body {
-    .section-title {
-      width: fit-content;
-      h4 {
-        border-right: 1px solid $lines;
-        padding-right: 16px;
-      }
+  }
+  &__title {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+    h4 {
+      border-right: 1px solid $lines;
+      padding-right: 16px;
+    }
+    i {
+      transition: .3s;
+      color: $dark500
+    }
+    &:hover {
       i {
-        transition: .3s;
-        color: $dark500
-      }
-      &:hover {
-        i {
-          transform: translateX(12px);
-          color: $oxford;
-        }
+        transform: translateX(12px);
+        color: $oxford;
       }
     }
   }
@@ -138,6 +156,7 @@
 
 .statistics {
   margin-bottom: 40px;
+  padding: 0 15px;
   &__container {
     padding: 80px 15px;
     height: 100%;
@@ -154,10 +173,15 @@
     align-items: center;
     justify-self: center;
     flex-direction: column;
+    h4 {
+      text-align: center
+    }
     span {
+      @include adaptiv-value("font-size", 96, 58, 1);
       font-size: 96px;
       color: $oxford;
       font-weight: 700;
+      
     }
   }
 }

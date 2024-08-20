@@ -1,176 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./components/head.html', {'title': ''})
+	@@include('./components/head.html', {'title': ''})
 
-<body>
-	@@include('./components/header.html')
-	<main>
-		<section class='hero'>
-			<div class="header__container">
-				<div class="page__hero-slider hero-slider">
-					<div class="hero-slider__body">
-						<div class="hero-slider__slider">
-							<div class="slider-hero__body swiper">
-								<a href='#' class="slider-hero__slide">
-									<div class='slider-hero__slid§e--image'
-										style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000000 100%), url('@img/hero.png') 50% 50% / cover no-repeat;"
-										onmouseover='liniarChanger(this, "@img/hero.png")'
-										onmouseout='liniarChangerOut(this, "@img/hero.png")'>
-									</div>
-									<div class='slider-hero__slide--body'>
-										<div class='hero__details'>
-											<time datetime="20 martie 2024">20 martie 2024</time>
-											<span> / </span>
-											<span class='tag'>Noutăți</span>
+	<body>
+		@@include('./components/header.html')
+		<main>
+			<section class="hero">
+				<div class="header__container">
+					<div class="page__hero-slider hero-slider">
+						<div class="hero-slider__body">
+							<div class="hero-slider__slider">
+								<div class="slider-hero__body swiper">
+									<a href="#" class="slider-hero__slide">
+										<div
+											class="slider-hero__slide--image"
+											style="
+												background: linear-gradient(
+														180deg,
+														rgba(0, 0, 0, 0.6) 0%,
+														rgba(0, 0, 0, 0.6) 100%
+													),
+													url('@img/hero.jpeg') 50%
+														50% / cover no-repeat;
+											"
+											onmouseover='liniarChanger(this, "@img/hero.jpeg")'
+											onmouseout='liniarChangerOut(this, "@img/hero.jpeg")'
+										></div>
+										<div class="slider-hero__slide--body">
+											<div class="hero__details">
+												<time datetime="20 martie 2024"
+													>20 martie 2024</time
+												>
+												<span> / </span>
+												<span class="tag">Noutăți</span>
+											</div>
+											<h2>
+												Biroul relații cu diaspora
+												lansează o nouă rundă de
+												granturi în cadrul Programului
+												Diaspora Engagement Hub
+											</h2>
 										</div>
-										<h2>
-											Biroul relații cu diaspora lansează o nouă rundă
-											de granturi în cadrul Programului Diaspora Engagement Hub
-										</h2>
-									</div>
-								</a>
-								<a href='#' class="slider-hero__slide">
-									<div class='slider-hero__slide--image'
-										style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #000000 100%), url('@img/hero.png') 50% 50% / cover no-repeat;"
-										onmouseover='liniarChanger(this, "@img/hero.png")'
-										onmouseout='liniarChangerOut(this, "@img/hero.png")'>
-									</div>
-									<div class='slider-hero__slide--body'>
-										<div class='hero__details'>
-											<time datetime="20 martie 2024">20 martie 2024</time>
-											<span> / </span>
-											<span class='tag'>Noutăți</span>
+									</a>
+									<a href="#" class="slider-hero__slide">
+										<div
+											class="slider-hero__slide--image"
+											style="
+												background: linear-gradient(
+														180deg,
+														rgba(0, 0, 0, 0.2) 0%,
+														#000000 100%
+													),
+													url('@img/hero.jpeg') 50%
+														50% / cover no-repeat;
+											"
+											onmouseover='liniarChanger(this, "@img/hero.jpeg")'
+											onmouseout='liniarChangerOut(this, "@img/hero.jpeg")'
+										></div>
+										<div class="slider-hero__slide--body">
+											<div class="hero__details">
+												<time datetime="20 martie 2024"
+													>20 martie 2024</time
+												>
+												<span> / </span>
+												<span class="tag">Noutăți</span>
+											</div>
+											<h2>
+												Biroul relații cu diaspora
+												lansează o nouă rundă de
+												granturi în cadrul Programului
+												Diaspora Engagement Hub
+											</h2>
 										</div>
-										<h2>
-											Biroul relații cu diaspora lansează o nouă rundă
-											de granturi în cadrul Programului Diaspora Engagement Hub
-										</h2>
+									</a>
+								</div>
+								<div class="slider-hero-controls">
+									<div
+										class="slider-hero-controls__arrows slider-arrows"
+									>
+										<button
+											type="button"
+											class="slider-arrow slider-arrow__prev hero-slider-arrow__prev"
+										>
+											<i class="icon-chevron-right"></i>
+										</button>
+										<button
+											type="button"
+											class="slider-arrow slider-arrow__next hero-slider-arrow__next"
+										>
+											<i class="icon-chevron-right"></i>
+										</button>
 									</div>
-								</a>
-							</div>
-							<div class="slider-hero-controls">
-								<div class="slider-hero-controls__arrows slider-arrows">
-									<button type="button" class="slider-arrow slider-arrow__prev hero-slider-arrow__prev">
-										<i class='icon-chevron-right'></i>
-									</button>
-									<button type="button" class="slider-arrow slider-arrow__next hero-slider-arrow__next">
-										<i class='icon-chevron-right'></i>
-									</button>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class='hero-cards'>
-					<a href='#' class="hero-cards__item"
-						style='background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 1) 100%), url("@img/uzor.png") 50% 50% / cover no-repeat'>
-						<img src="@img/implicatee.svg" alt="implicate">
-						<h5>Implică-te</h5>
-					</a>
-					<a href='#' class="hero-cards__item"
-						style='background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 1) 100%), url("@img/uzor.png") 50% 50% / cover no-repeat'>
-						<img src="@img/revenire.svg" alt="implicate">
-						<h5>Revenire</h5>
-					</a>
-					<a href='#' class="hero-cards__item"
-						style='background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 1) 100%), url("@img/uzor.png") 50% 50% / cover no-repeat'>
-						<img src="@img/istorii.svg" alt="implicate">
-						<h5>Istorii de succes</h5>
-					</a>
-					<a href='#' class="hero-cards__item"
-						style='background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 1) 100%), url("@img/uzor.png") 50% 50% / cover no-repeat'>
-						<img src="@img/info.svg" alt="implicate">
-						<h5>Informații utile</h5>
-					</a>
-				</div>
-			</div>
-		</section>
-		<section class='media'>
-			<div class="media__container">
-				<div class='media__body'>
-					<a href='#' class='section-title'>
-						<h4>Media</h4>
-						<i class='icon-arrow-right'></i>
-					</a>
-					<div class="grid posts-grid">
-						@@include('./components/article.html')
-						@@include('./components/article.html')
-						@@include('./components/article.html')
-						@@include('./components/article.html')
-						@@include('./components/article.html')
+					<div class="hero-cards">
+						<a
+							href="#"
+							class="hero-cards__item"
+							style="
+								background: linear-gradient(
+										90deg,
+										#ffffff 0%,
+										rgba(255, 255, 255, 1) 100%
+									),
+									url('@img/uzor.png') 50% 50% / cover
+										no-repeat;
+							"
+						>
+							<img src="@img/implicatee.svg" alt="implicate" />
+							<h5>Implică-te</h5>
+						</a>
+						<a
+							href="#"
+							class="hero-cards__item"
+							style="
+								background: linear-gradient(
+										90deg,
+										#ffffff 0%,
+										rgba(255, 255, 255, 1) 100%
+									),
+									url('@img/uzor.png') 50% 50% / cover
+										no-repeat;
+							"
+						>
+							<img src="@img/revenire.svg" alt="implicate" />
+							<h5>Revenire</h5>
+						</a>
+						<a
+							href="#"
+							class="hero-cards__item"
+							style="
+								background: linear-gradient(
+										90deg,
+										#ffffff 0%,
+										rgba(255, 255, 255, 1) 100%
+									),
+									url('@img/uzor.png') 50% 50% / cover
+										no-repeat;
+							"
+						>
+							<img src="@img/istorii.svg" alt="implicate" />
+							<h5>Istorii de succes</h5>
+						</a>
+						<a
+							href="#"
+							class="hero-cards__item"
+							style="
+								background: linear-gradient(
+										90deg,
+										#ffffff 0%,
+										rgba(255, 255, 255, 1) 100%
+									),
+									url('@img/uzor.png') 50% 50% / cover
+										no-repeat;
+							"
+						>
+							<img src="@img/info.svg" alt="implicate" />
+							<h5>Informații utile</h5>
+						</a>
 					</div>
 				</div>
-				<aside class='links'>
-					<h4>Link-uri</h4>
-					<a href="#" class='links-item'>
-						<i></i>
-						<p>Profesioniști din Diasporă pentru Dezvoltare</p>
-					</a>
-					<a href="#" class='links-item'>
-						<i></i>
-						<p>Istorii de succes</p>
-					</a>
-					<a href="#" class='links-item'>
-						<i></i>
-						<p>Despre tabara DOR</p>
-					</a>
-					<a href="#" class='links-item'>
-						<i></i>
-						<p>Diaspora acasă reușește</p>
-					</a>
-					<a href="#" class='links-item'>
-						<i></i>
-						<p>Diaspora engagement hub</p>
-					</a>
-					<a href="emoldovata.gov.xlsx" class='links-item'>
-						<i></i>
-						<p>emoldovata.gov.md</p>
-					</a>
-					<a href="moldova.md" class='links-item'>
-						<i></i>
-						<p>moldova.md</p>
-					</a>
-					<a href="presedinte.pdf" class='links-item'>
-						<i></i>
-						<p>presedinte.md</p>
-					</a>
-					<a href="cna.docx" class='links-item'>
-						<i></i>
-						<p>cna.md</p>
-					</a>
-					<button class='button button__yellow newsletter__button'>
-						Abonează-te la newsletter
-						<i class='icon-bell'></i>
-					</button>
-				</aside>
-			</div>
-		</section>
-		<section class='statistics'>
-			<div class="statistics__container"
-				style='background: linear-gradient(0, #FFFFFF 0%, rgba(255, 255, 255, 0.9) 100%), url("@img/clouds.jpeg") 50% 50% / cover no-repeat'>
-				<div class="statistics-item">
-					<h4>Participanți DOR</h4>
-					<span>1000</span>
+			</section>
+			<section class="media">
+				<div class="media__container">
+					<div class="media__body">
+						<a href="#" class="media__title">
+							<h4>Media</h4>
+							<i class="icon-arrow-right"></i>
+						</a>
+						<div class="grid posts-grid">
+							@@include('./components/article.html')
+							@@include('./components/article.html')
+							@@include('./components/article.html')
+							@@include('./components/article.html')
+							@@include('./components/article.html')
+						</div>
+					</div>
+					<aside class="aside-links">
+						<h4>Link-uri</h4>
+						<a href="#" class="aside-links__item" data-icon>
+							<i></i>
+							<p>Profesioniști din Diasporă pentru Dezvoltare</p>
+						</a>
+						<a href="#" class="aside-links__item" data-icon>
+							<i></i>
+							<p>Istorii de succes</p>
+						</a>
+						<a href="#" class="aside-links__item" data-icon>
+							<i></i>
+							<p>Despre tabara DOR</p>
+						</a>
+						<a href="#" class="aside-links__item" data-icon>
+							<i></i>
+							<p>Diaspora acasă reușește</p>
+						</a>
+						<a href="#" class="aside-links__item" data-icon>
+							<i></i>
+							<p>Diaspora engagement hub</p>
+						</a>
+						<a
+							href="emoldovata.gov.xlsx"
+							class="aside-links__item"
+							data-icon
+						>
+							<i></i>
+							<p>emoldovata.gov.md</p>
+						</a>
+						<a
+							href="moldova.md"
+							class="aside-links__item"
+							data-icon
+						>
+							<i></i>
+							<p>moldova.md</p>
+						</a>
+						<a
+							href="presedinte.pdf"
+							class="aside-links__item"
+							data-icon
+						>
+							<i></i>
+							<p>presedinte.md</p>
+						</a>
+						<a href="cna.docx" class="aside-links__item" data-icon>
+							<i></i>
+							<p>cna.md</p>
+						</a>
+						<button class="button button__yellow" id="modal-button">
+							Abonează-te la newsletter
+							<i class="icon-bell"></i>
+						</button>
+					</aside>
 				</div>
-				<div class="statistics-item">
-					<h4>Centre educaționale în Diasporă</h4>
-					<span>22</span>
+			</section>
+
+			<section class="statistics">
+				<div
+					class="statistics__container"
+					style="
+						background: linear-gradient(
+								0,
+								#ffffff 0%,
+								rgba(255, 255, 255, 0.9) 100%
+							),
+							url('@img/clouds.jpeg') 50% 50% / cover no-repeat;
+					"
+				>
+					<div class="statistics-item">
+						<h4>Participanți DOR</h4>
+						<span akhi="1000">0</span>
+					</div>
+					<div class="statistics-item">
+						<h4>Centre educaționale în Diasporă</h4>
+						<span akhi="22">0</span>
+					</div>
+					<div class="statistics-item">
+						<h4>Asociații ale diasporei</h4>
+						<span akhi="186">0</span>
+					</div>
+					<div class="statistics-item">
+						<h4>Proiecte implementate DEH</h4>
+						<span akhi="110">0</span>
+					</div>
+					<div class="statistics-item">
+						<h4>Proiecte implementate DAR</h4>
+						<span akhi="104">0</span>
+					</div>
 				</div>
-				<div class="statistics-item">
-					<h4>Asociații ale diasporei</h4>
-					<span>186</span>
-				</div>
-				<div class="statistics-item">
-					<h4>Proiecte implementate DEH</h4>
-					<span>110</span>
-				</div>
-				<div class="statistics-item">
-					<h4>Proiecte implementate DAR</h4>
-					<span>104</span>
-				</div>
-			</div>
-		</section>
-		<!-- <div class="dropdown" data-dropdown>
+			</section>
+			<!-- <div class="dropdown" data-dropdown>
             <button class="dropdown-button" data-dropdown-button>Dropdown</button>
             <div class="dropdown-menu">
                 <div class="dropdown-links">
@@ -186,32 +286,32 @@
                 Content 1
             </div>
         </div> -->
-	</main>
-	@@include('./components/newsletter-modal.html')
+		</main>
+		@@include('./components/newsletter-modal.html')
+		@@include('./components/footer.html')
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+			integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
 
-	@@include('./components/footer.html')
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
-		integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+			function liniarChanger(element, imgSrc) {
+				gsap.to(element, {
+					duration: 0.3,
+					backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, var(--black100)), url(${imgSrc})`,
+				})
+			}
 
-	<script>
-		function liniarChanger(element, imgSrc) {
-			gsap.to(element, {
-				duration: 0.3,
-				backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, var(--black100)), url(${imgSrc})`
-			})
-		}
-
-		function liniarChangerOut(element, imgSrc) {
-			gsap.to(element, {
-				duration: 0.3,
-				backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, var(--black100)), url(${imgSrc})`,
-			})
-		}
-
-	</script>
-	<script src="js/app.min.js"></script>
-</body>
-
+			function liniarChangerOut(element, imgSrc) {
+				gsap.to(element, {
+					duration: 0.3,
+					backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, var(--black100)), url(${imgSrc})`,
+				})
+			}
+		</script>
+		<script src="js/app.min.js"></script>
+	</body>
 </html>

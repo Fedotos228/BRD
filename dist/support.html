@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unitate de suport la revenire</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css?_v=20240820101410"
+        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20240820101410">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+  <header class="header">
+  <div class="band"></div>
+  <div class='header__container'>
+    <div class='header__upper'>
+      <div class='header__left'>
+        <img src="img/logos/gov.png" alt="gov" class='logo'>
+        <a href='/' class='header__logo'>
+          <img src="img/logos/logo.svg" alt="Logo" class='logo'>
+          <h4>Biroul Relații <br /> cu Diaspora</h4>
+        </a>
+      </div>
+      <div class='header__right'>
+        <form action="#" class='header__search search'>
+          <input type="text">
+          <button type='button' class='header__search-button'>
+            <img src="img/icons/search.svg" alt="search">
+          </button>
+        </form>
+        <div class='languages dropdown' data-dropdown>
+          <button type='button' class='dropdown-button' data-dropdown-button>
+            <img src="img/icons/globe.svg" alt="glove">
+          </button>
+          <ul class='languages-list dropdown-menu'>
+            <li class='languages-list__item current'>
+              <button>
+                <img src="img/icons/ro.svg" alt="ro">
+                <span>Română</span>
+              </button>
+            </li>
+            <li class='languages-list__item'>
+              <button>
+                <img src="img/icons/en.svg" alt="en">
+                <span>English</span>
+              </button>
+            </li>
+            <li class='languages-list__item'>
+              <button>
+                <img src="img/icons/ru.svg" alt="ru">
+                <span>Русский</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <a href='#' class='button button__azure'>
+          Contactează-ne
+          <img src="img/icons/arrow-up-right.svg" alt="arrow">
+        </a>
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="header-nav header__nav">
+    <ul class='header-nav__list header-nav__container'>
+      <li class='nav-list__item'>
+        <a href="/">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.25 11.9998L11.2045 3.04533C11.6438 2.60599 12.3562 2.60599 12.7955 3.04532L21.75 11.9998M4.5 9.74983V19.8748C4.5 20.4961 5.00368 20.9998 5.625 20.9998H9.75V16.1248C9.75 15.5035 10.2537 14.9998 10.875 14.9998H13.125C13.7463 14.9998 14.25 15.5035 14.25 16.1248V20.9998H18.375C18.9963 20.9998 19.5 20.4962 19.5 19.8748V9.74983M8.25 20.9998H16.5"
+              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </a>
+      </li>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          BRD
+          <i class='icon-chevron-down'></i>
+        </a>
+        <ul class="submenu">
+          <li class='submenu__item'>
+            <a href="#">Despre noi</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Echipa</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Funcții vacante</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Rapoarte</a>
+          </li>
+          <li class='submenu__item'>
+            <a href="#">Contactează-ne</a>
+          </li>
+        </ul>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Transparență
+          <i class='icon-chevron-down'></i>
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Implică-te
+          <i class='icon-chevron-down'></i>
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Revenire
+          <i class='icon-chevron-down'></i>
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Comunicare și Media
+          <i class='icon-chevron-down'></i>
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Istorii de succes
+          <i class='icon-chevron-down'></i>
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a href="#">
+          Informații utile
+          <i class='icon-chevron-down'></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="header__nav--mobile">
+	<form action='#' class="search">
+  <img src="img/icons/search.svg" alt="search">
+  <input type="text" placeholder='Aici poți căuta ce ai nevoie'>
+</form>
+	
+
+		<ul class='header-nav__list header-nav__container'>
+			<li class='nav-list__item'>
+				<a href="#">
+					Principala
+				</a>
+			</li>
+			</li>
+			<li class='nav-list__item'>
+			  <a href="#">
+				BRD
+				<i class='icon-chevron-down'></i>
+			  </a>
+			  <ul class="submenu">
+				<li class='submenu__item'>
+				  <a href="#">Despre noi</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Echipa</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Funcții vacante</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Rapoarte</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Contactează-ne</a>
+				</li>
+			  </ul>
+			  <ul class="submenu">
+				<li class='submenu__item'>
+				  <a href="#">Despre noi</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Echipa</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Funcții vacante</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Rapoarte</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Contactează-ne</a>
+				</li>
+			  </ul>
+			  <ul class="submenu">
+				<li class='submenu__item'>
+				  <a href="#">Despre noi</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Echipa</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Funcții vacante</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Rapoarte</a>
+				</li>
+				<li class='submenu__item'>
+				  <a href="#">Contactează-ne</a>
+				</li>
+			  </ul>
+			</li>
+			<li class='nav-list__item'>
+			  <a href="#">
+				Transparență
+				<i class='icon-chevron-down'></i>
+			  </a>
+			</li>
+			<li class='nav-list__item'>
+			  <a href="#">
+				Implică-te
+				<i class='icon-chevron-down'></i>
+			  </a>
+			</li>
+			<li class='nav-list__item'>
+			  <a href="#">
+				Revenire
+				<i class='icon-chevron-down'></i>
+			  </a>
+			</li>
+			<li class='nav-list__item'>
+			  <a href="#">
+				Comunicare și Media
+				<i class='icon-chevron-down'></i>
+			  </a>
+			</li>
+			<li class='nav-list__item'>
+			  <a href="#">
+				Istorii de succes
+				<i class='icon-chevron-down'></i>
+			  </a>
+			</li>
+			<li class='nav-list__item'>
+			  <a href="#">
+				Informații utile
+				<i class='icon-chevron-down'></i>
+			  </a>
+			</li>
+		  </ul>
+  </div>
+</header>
+  <main>
+    <div class="__container page-grid">
+      <aside class="aside-menu">
+	<!-- TODO: asta o faci cu js sa se duca inapoi -->
+	<button class="button button__outline" id='back-button'>
+		<i class="icon-arrow-return-left"></i>
+	</button>
+
+	<nav class="aside-menu__navigation">
+		<ul>
+			<li><a href="#">Despre noi</a></li>
+			<li><a href="#">Echipa</a></li>
+			<li><a href="#">Funcții vacante</a></li>
+			<li><a href="#">Rapoarte</a></li>
+			<li><a href="#">Contactează-ne</a></li>
+		</ul>
+	</nav>
+</aside>
+      <div class='support'>
+        <div class="support__intro"
+          style='background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/card.jpeg") 50% 50% / cover no-repeat'>
+          <h4>Vă ajutăm să reveniți în Moldova!</h4>
+          <button class="button button__yellow" id='modal-button'>
+            Completează formular
+          </button>
+        </div>
+        <div class='support-body'>
+          <div class='support-body__desc'>
+            <p>Și în acest an așteptăm moldovenii din toate țările lumii să vină acasă pentru a celebra bucuria de a fi
+              împreună, dar și a descoperi oportunitățile de dezvoltare.</p>
+            <p>Astfel, în data de 18 august organizăm „Congresul Diasporei”, aflat la a 10-a ediție, care va oferi
+              conaționalilor oportunitatea de a interacționa cu autoritățile publice, dar și a explora servicii și
+              programe guvernamentale.</p>
+
+            <p>Iar a doua zi, pe 19 august, așteptăm toți antreprenorii și doritorii de a investi la „Diaspora Business
+              Forum”, unde vor descoperi tendințele economice și oportunitățile investiționale din Republica Moldova.
+            </p>
+
+            <p>Zilele Diasporei sunt organizate cu suportul proiectului „Fondul de Consiliere în Politici”, finanțat de
+              Ministerul Federal German pentru Cooperare Economică și Dezvoltare (BMZ) și implementat de Agenția de
+              Cooperare Internațională a Germaniei (GIZ) în Moldova.
+            </p>
+          </div>
+          <div class="section-title">
+            <h6>
+              Contactet:
+            </h6>
+          </div>
+          <div class="support-body__contacts">
+            <div>
+              <h6>Telefon</h6>
+              <ul>
+                <li>
+                  <a href="tel:(022) 250-350">(022) 250-350</a>
+                </li>
+                <li>
+                  <a href="tel:(022) 250-239">Comunicare - (022) 250-239</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h6>Email:</h6>
+              <ul>
+                <li>
+                  <a href="mailto:brd@gov.md">brd@gov.md</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class='section-title'>
+            <h6>Întrebări și răspunsuri:</h6>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item" data-expanded="false">
+  <div class="accordion-header">
+    <h6>Ce este Biroul Relațiilor cu Diaspora (BRD) și care este scopul său?</h6>
+    <button class="accordion-button">
+      <span></span>
+    </button>
+  </div>
+  <div class='accordion-body'>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+      </strong>
+      <p>Belgia, Bruxelles</p>
+      <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+      </strong>
+      <p>Belgia, Bruxelles</p>
+      <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+        </p>
+        <p>Belgia, Bruxelles</p>
+        <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <!-- <p>
+      BRD este o entitate guvernamentală din Republica Moldova responsabilă de relațiile cu cetățenii
+      moldoveni care locuiesc în străinătate (diaspora). Scopul BRD este de a facilita integrarea diasporei
+      în societatea moldovenească, de a promova colaborarea dintre diaspora și autoritățile din Moldova și
+      de a oferi sprijin diasporei în diverse domenii, cum ar fi afaceri, educație, cultură și participare
+      politică.
+    </p> -->
+  </div>
+</div>
+            <div class="accordion-item" data-expanded="false">
+  <div class="accordion-header">
+    <h6>Ce este Biroul Relațiilor cu Diaspora (BRD) și care este scopul său?</h6>
+    <button class="accordion-button">
+      <span></span>
+    </button>
+  </div>
+  <div class='accordion-body'>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+      </strong>
+      <p>Belgia, Bruxelles</p>
+      <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+      </strong>
+      <p>Belgia, Bruxelles</p>
+      <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+        </p>
+        <p>Belgia, Bruxelles</p>
+        <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <!-- <p>
+      BRD este o entitate guvernamentală din Republica Moldova responsabilă de relațiile cu cetățenii
+      moldoveni care locuiesc în străinătate (diaspora). Scopul BRD este de a facilita integrarea diasporei
+      în societatea moldovenească, de a promova colaborarea dintre diaspora și autoritățile din Moldova și
+      de a oferi sprijin diasporei în diverse domenii, cum ar fi afaceri, educație, cultură și participare
+      politică.
+    </p> -->
+  </div>
+</div>
+            <div class="accordion-item" data-expanded="false">
+  <div class="accordion-header">
+    <h6>Ce este Biroul Relațiilor cu Diaspora (BRD) și care este scopul său?</h6>
+    <button class="accordion-button">
+      <span></span>
+    </button>
+  </div>
+  <div class='accordion-body'>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+      </strong>
+      <p>Belgia, Bruxelles</p>
+      <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+      </strong>
+      <p>Belgia, Bruxelles</p>
+      <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+        </p>
+        <p>Belgia, Bruxelles</p>
+        <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <!-- <p>
+      BRD este o entitate guvernamentală din Republica Moldova responsabilă de relațiile cu cetățenii
+      moldoveni care locuiesc în străinătate (diaspora). Scopul BRD este de a facilita integrarea diasporei
+      în societatea moldovenească, de a promova colaborarea dintre diaspora și autoritățile din Moldova și
+      de a oferi sprijin diasporei în diverse domenii, cum ar fi afaceri, educație, cultură și participare
+      politică.
+    </p> -->
+  </div>
+</div>
+            <div class="accordion-item" data-expanded="false">
+  <div class="accordion-header">
+    <h6>Ce este Biroul Relațiilor cu Diaspora (BRD) și care este scopul său?</h6>
+    <button class="accordion-button">
+      <span></span>
+    </button>
+  </div>
+  <div class='accordion-body'>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+      </strong>
+      <p>Belgia, Bruxelles</p>
+      <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+      </strong>
+      <p>Belgia, Bruxelles</p>
+      <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+        </p>
+        <p>Belgia, Bruxelles</p>
+        <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <!-- <p>
+      BRD este o entitate guvernamentală din Republica Moldova responsabilă de relațiile cu cetățenii
+      moldoveni care locuiesc în străinătate (diaspora). Scopul BRD este de a facilita integrarea diasporei
+      în societatea moldovenească, de a promova colaborarea dintre diaspora și autoritățile din Moldova și
+      de a oferi sprijin diasporei în diverse domenii, cum ar fi afaceri, educație, cultură și participare
+      politică.
+    </p> -->
+  </div>
+</div>
+            <div class="accordion-item" data-expanded="false">
+  <div class="accordion-header">
+    <h6>Ce este Biroul Relațiilor cu Diaspora (BRD) și care este scopul său?</h6>
+    <button class="accordion-button">
+      <span></span>
+    </button>
+  </div>
+  <div class='accordion-body'>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+      </strong>
+      <p>Belgia, Bruxelles</p>
+      <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+      </strong>
+      <p>Belgia, Bruxelles</p>
+      <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <div class="accordion-associates__body">
+      <strong>
+        Association Culturelle Belgo Moldave "Casa Mare"
+        </p>
+        <p>Belgia, Bruxelles</p>
+        <a href="mailto:lidia.sigarevschi@gmail.com">lidia.sigarevschi@gmail.com</a>
+    </div>
+    <!-- <p>
+      BRD este o entitate guvernamentală din Republica Moldova responsabilă de relațiile cu cetățenii
+      moldoveni care locuiesc în străinătate (diaspora). Scopul BRD este de a facilita integrarea diasporei
+      în societatea moldovenească, de a promova colaborarea dintre diaspora și autoritățile din Moldova și
+      de a oferi sprijin diasporei în diverse domenii, cum ar fi afaceri, educație, cultură și participare
+      politică.
+    </p> -->
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <footer class="footer">
+  <div class="footer__container">
+    <div class="footer__nav">
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>BRD:</p>
+          <ul>
+            <li>
+              <a href="#">Despre noi</a>
+            </li>
+            <li>
+              <a href="#">Echipa</a>
+            </li>
+            <li>
+              <a href="#">Funcții vacante</a>
+            </li>
+            <li>
+              <a href="#">Rapoarte</a>
+            </li>
+            <li>
+              <a href="#">Contactează-ne</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list">
+          <p>Transparență:</p>
+          <ul>
+            <li>
+              <a href="#">Biroul și Diaspora</a>
+            </li>
+            <li>
+              <a href='#'>Cadrul legislativ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>Implică-te:</p>
+          <ul>
+            <li>
+              <a href="#">Programe</a>
+            </li>
+            <li>
+              <a href="#">Platforma de implicare a experților din diaspora</a>
+            </li>
+            <li>
+              <a href="#">Investește acasă</a>
+            </li>
+            <li>
+              <a href="#">E-learning</a>
+            </li>
+            <li>
+              <a href="#">Implicare în proces decizional</a>
+            </li>
+            <li>
+              <a href="#">Lucrul cu punctele focale Diaspora Migrație Dezvoltare</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>Comunicare și Media:</p>
+          <ul>
+            <li>
+              <a href="#">Media</a>
+            </li>
+            <li>
+              <a href="#">Podcasturi</a>
+            </li>
+            <li>
+              <a href="#">Ghid de identitate vizuală</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list">
+          <p>revenire:</p>
+          <ul>
+            <li>
+              <a href="#">Ghid pentru suport la revenire</a>
+            </li>
+            <li>
+              <a href="#">Unitatea de suport la revenire</a>
+            </li>
+            <li>
+              <a href="#">Istorii de succes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>Informații utile:</p>
+          <ul>
+            <li>
+              <a href="#">Asociații și grupuri în diaspora</a>
+            </li>
+            <li>
+              <a href="#">Centre Educaționale</a>
+            </li>
+            <li>
+              <a href="#">Studiază limba română</a>
+            </li>
+            <li>
+              <a href="#">Platforme media ale diasporei</a>
+            </li>
+            <li>
+              <a href="#">Inițiative din diasporă</a>
+            </li>
+            <li>
+              <a href="#">Studii / Rapoarte / Evaluări</a>
+            </li>
+            <li>
+              <a href="#">Colaborare internațională</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>Rezultate:</p>
+          <ul>
+            <li>
+              <a href="#">Implicarea experților din diaspora</a>
+            </li>
+            <li>
+              <a href="#">Zilele Diasporei</a>
+            </li>
+            <li>
+              <a href="#">Congresul Diasporei</a>
+            </li>
+            <li>
+              <a href="#">Diaspora Business Forum</a>
+            </li>
+            <li>
+              <a href="#">Programe</a>
+            </li>
+            <li>
+              <a href="#">Limba română în diaspora</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__list">
+          <p>Rețele sociale:</p>
+          <ul class='socials'>
+            <li>
+              <a href="#">
+                <img src="img/icons/insta.svg" alt="insta">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icons/facebook.svg" alt="facebook">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/icons/twitter.svg" alt="twitter">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list">
+          <p>Date de contact:</p>
+          <ul>
+            <li>
+              <a href="#">Piața Marii Adunări Naționale, nr. 1</a>
+            </li>
+            <li>
+              <a href="tel:(022) 250-350">(022) 250-350</a>
+            </li>
+            <li>
+              <a href="tel:(022) 250-351">(022) 250-351</a>
+            </li>
+            <li><a href="mailto:brd@gov.md">brd@gov.md</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="footer__links">
+    <a href="#">gov.md</a>
+    <a href="#">cariere.gov.md</a>
+    <a href="#">particip.gov.md</a>
+  </nav>
+  <div class='footer__bottom'>
+    <div class="footer__container">
+      <p class='copyright'>Copyright © 2024. All rights reserved.</p>
+      <p>Guvernul Republicii Moldova. Biroul Relații cu Diaspora</p>
+    </div>
+  </div>
+</footer>
+  <dialog class='modal'>
+  <button autofocus class='modal__close'>
+    <i class=' icon-x-mark'></i>
+  </button>
+  <h2>Date de contact</h2>
+  <p>Lăsați datele dvs de contact și vom reveni cu un apel</p>
+
+  <form class='modal__form'>
+    <label for="lastname">
+      <span>Nume</span>
+      <input type=" text" placeholder='Rusu' name='lastname' id='lastname'>
+    </label>
+    <label for="firstname">
+      <span>Prenume</span>
+      <input type="text" placeholder='Alexandru' name='firstname' id='firstname'>
+    </label>
+    <label for="phone">
+      <span>Nr. de telefon</span>
+      <input type="tel" placeholder='069 352 170' name='phone' id='phone'>
+    </label>
+    <label for="email">
+      <span>Email</span>
+      <input type="text" placeholder='user@gmail.com' name='email' id='email'>
+    </label>
+    <button>
+      Finisează formular
+      <i class="icon-check"></i>
+    </button>
+  </form>
+</dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240820101410"></script>
+  <script src="js/app.min.js?_v=20240820101410"></script>
+</body>
+
+</html>

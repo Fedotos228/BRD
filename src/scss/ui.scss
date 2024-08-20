@@ -1,31 +1,38 @@
-
 h1 {
-	@include adaptiv-value("font-size", 48, 38, 1);
+	@include adaptiv-value('font-size', 48, 38, 1);
 	font-weight: 700;
 	line-height: 64px;
 }
 h2 {
-	@include adaptiv-value("font-size", 36, 28, 1);
+	@include adaptiv-value('font-size', 36, 22, 1);
 	font-weight: 700;
+	line-height: 120%;
 }
 h3 {
 	font-size: 32px;
 	font-weight: 700;
 }
 h4 {
-	font-size: 24px;
+	@include adaptiv-value('font-size', 24, 18, 1);
 	font-weight: 700;
 }
 h5 {
-	font-size: 20px;
+	@include adaptiv-value('font-size', 20, 16, 1);
 	font-weight: 600;
 }
 h6 {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 28px;
+}
+
+strong {
 	font-size: 16px;
 	font-weight: 500;
 }
 
 p {
+	line-height: 22px;
 }
 
 .no-scrollbar {
@@ -44,6 +51,11 @@ p {
 	}
 }
 
+.border-rounded {
+	border: 1px solid $lines;
+	border-radius: 8px;
+}
+
 .search {
 	position: relative;
 	width: 100%;
@@ -52,8 +64,9 @@ p {
 	align-items: center;
 	gap: 10px;
 	border: 1px solid $lines;
-	padding: 12px;
 	border-radius: 8px;
+	padding-left: 12px;
+	transition: 0.2s;
 	> button {
 		width: 20px;
 		height: 20px;
@@ -61,31 +74,30 @@ p {
 		top: 50%;
 		transform: translateY(-50%);
 	}
-	input {
-		width: 0px;
+	> input {
+		padding: 12px 12px 12px 0;
+	}
+	&:hover {
+		border-color: $azure;
+	}
+	&-posts {
+		margin: 50px auto;
 	}
 }
 
 input {
 	width: 100%;
 	outline: none;
-	border: none
-}
-
-.section-title {
-	margin-bottom: 20px;
-	display: flex;
-	align-items: center;
-	gap: 16px;
+	border: none;
 }
 
 .media-item {
 	border: 1px solid $lines;
 	border-radius: 8px;
-	transition: .1s;
+	transition: 0.1s;
 	&:hover {
 		border-color: $oxford;
-		*{
+		* {
 			border-color: $oxford;
 		}
 	}
@@ -116,17 +128,17 @@ input {
 	}
 	&__footer {
 		padding: 16px 12px;
-		time  {
+		time {
 			color: $dark700;
 		}
 	}
 }
 
-.links {
+.aside-links {
 	h4 {
 		margin-bottom: 20px;
 	}
-	&-item {
+	&__item {
 		display: flex;
 		align-items: center;
 		gap: 10px;
@@ -134,8 +146,8 @@ input {
 		padding: 16px;
 		border-radius: 8px;
 		margin-bottom: 10px;
-		transition: all .2s;
-		&:hover{
+		transition: all 0.2s;
+		&:hover {
 			border-color: $oxford;
 			p {
 				text-decoration: underline;
@@ -144,12 +156,11 @@ input {
 	}
 }
 
-.socials{
+.socials {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 }
-
 
 .grid {
 	display: grid;
@@ -161,7 +172,26 @@ input {
 	@include adaptiv-value('gap', 30, 20, 1);
 }
 
-.newsletter {
+.page-grid {
+	display: grid;
+	grid-template-columns: minmax(250px, 300px) 1fr;
+	@include adaptiv-value('gap', 30, 20, 1);
+
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+		gap: 50px;
+	}
+}
+
+.section-title {
+	border-width: 1px 0 1px 0;
+	border-style: solid;
+	border-color: $lines;
+	padding: 24px;
+	background-color: #fafafa;
+}
+
+.modal {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -172,10 +202,10 @@ input {
 	border: none;
 	box-shadow: 0px 4px 30px 0px rgba(132, 132, 132, 0.15);
 	border-radius: 8px;
-	@include adaptiv-value("padding", 50, 15, 1);
-	
+	@include adaptiv-value('padding', 50, 15, 1);
+
 	&::backdrop {
-		background-color: rgba(0, 0, 0, 0.60);
+		background-color: rgba(0, 0, 0, 0.6);
 		opacity: 0.75;
 	}
 
@@ -211,7 +241,7 @@ input {
 				border-radius: 8px;
 				padding: 10px 12px;
 				font-size: 16px;
-				transition: .2s ease-out;
+				transition: 0.2s ease-out;
 				&:hover,
 				&:focus-within {
 					border-color: $dark500;
@@ -229,10 +259,256 @@ input {
 			border-radius: 8px;
 			padding: 10px 0;
 			text-transform: uppercase;
-			transition: .2s ease-out;
-			&:hover{
+			transition: 0.2s ease-out;
+			&:hover {
 				background-color: $oxford;
 				color: white;
+			}
+		}
+	}
+}
+
+.subcompartiment {
+	min-height: 60vh;
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 10px;
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-inline: 5px;
+		@include adaptiv-value('padding-top', 30, 20, 1);
+		@include adaptiv-value('padding-bottom', 30, 20, 1);
+		border: 1px solid $lines;
+		border-radius: 8px;
+		text-align: center;
+		transition: 0.2s;
+		&:hover {
+			border-color: $oxford;
+		}
+	}
+}
+
+.cards-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 20px;
+}
+
+.page-title {
+	padding: 24px;
+	background-color: #fafafa;
+	border: 1px solid $lines;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+.underline-effect {
+	position: relative;
+	border-bottom: 1px solid $lines;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $oxford;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.3s;
+	}
+	&:hover::after {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+	&.active {
+		&::after {
+			transform: scaleX(1);
+		}
+	}
+}
+
+.categories {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	@include adaptiv-value('gap', 24, 10, 1);
+	margin-bottom: 24px;
+	@media (max-width: $mobile) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	&-button {
+		width: 100%;
+		padding: 16px 25px;
+		text-align: center;
+		white-space: nowrap;
+	}
+}
+
+.years {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 24px;
+	margin: 20px 0;
+	@media (max-width: $mobile) {
+		justify-content: center;
+	}
+	&-button {
+		padding: 16px 30px;
+		&.active {
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.guide-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 20px;
+	background-color: #fafafa;
+	border: 1px solid $lines;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.links {
+	margin-top: 10px;
+	border: 1px solid $lines;
+	border-radius: 8px;
+	transition: 0.2s;
+
+	&-item {
+		display: block;
+		width: 100%;
+		@include adaptiv-value('padding', 24, 18, 1);
+		border-bottom: 1px solid $lines;
+		&:hover {
+			border-color: $azure;
+			.links-item {
+				&__title {
+					color: $azure;
+				}
+			}
+		}
+		&__title {
+			font-size: 16px;
+			font-weight: 500;
+			transition: 0.2s;
+		}
+		&__details {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-top: 10px;
+			p {
+				color: $azure;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.search-results__title {
+	background-color: rgba(242, 245, 247, 1);
+	padding: 50px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 5px;
+	p {
+		span {
+			color: $azure;
+		}
+	}
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 10px;
+	padding: 24px;
+	&-item {
+		height: 220px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&.video {
+			position: relative;
+			i {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 24px;
+				color: #fff;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+}
+
+.single-page-links {
+	border-radius: 0;
+	margin: 0;
+	border-width: 0;
+	.links-item {
+		&:last-child {
+			border-bottom-width: 0px;
+		}
+	}
+}
+
+.not-found {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	@include adaptiv-value('padding-top', 60, 30, 1);
+	@include adaptiv-value('padding-bottom', 60, 30, 1);
+	@media (max-width: $tablet) {
+		flex-direction: column-reverse;
+	}
+	img {
+		@include adaptiv-value('width', 610, 300, 1);
+	}
+	&__body {
+		p {
+			color: $dark700;
+			margin-top: 8px;
+			margin-bottom: 24px;
+		}
+		a {
+			display: block;
+			color: $oxford;
+			text-decoration: underline;
+			margin-bottom: 12px;
+			&:hover {
+				color: $azure;
+			}
+		}
+		.button {
+			display: flex;
+			max-width: 210px;
+			margin-top: 24px;
+			text-decoration: none;
+			&:hover {
+				color: #fff;
 			}
 		}
 	}

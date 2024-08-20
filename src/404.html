@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': '404'})
+
+<body>
+  <!-- @@include('./components/header.html') -->
+  <main>
+    <div class="not-found __container">
+      <img src="@img/404.svg" alt="404">
+      <div class='not-found__body'>
+        <h3>
+          404 - Pagină inexistentă
+        </h3>
+        <p>
+          Pagina pe care o căutați nu mai este disponibilă. Dar nu vă descurajați! Avem o mulțime de articole
+          interesante de citit, precum:
+        </p>
+        <a href="#">Ședință de lucru cu punctele focale implicate în coordonarea politicii de stat pentru diaspora</a>
+        <a href="#">Consultări Publice pentru Atragerea Expertizei Diasporei</a>
+        <a href="#">„Steaua fără nume” a lui Mihail Sebastian a vegheat drumul spre casă al spectatorilor de la
+          Paris
+        </a>
+        <a href='#' class='button button__outline'>
+          Înapoi acasă
+          <i class="icon-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </main>
+  @@include('./components/footer.html')
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

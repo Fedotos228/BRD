@@ -1,0 +1,85 @@
+.accordion {
+  padding: 24px;
+  &-item {
+    padding: 24px;
+    border: 1px solid $lines;
+    border-radius: 8px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &[data-expanded="true"] {
+      .accordion-button {
+        span {
+          &::before {
+            transform: rotate(90deg) translate(-6px, 1px);
+          }
+        }
+      }
+      .accordion-body {
+        margin-top: 15px;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: pointer;
+  }
+  &-button {
+    span {
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      &::before, &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 2px;
+        height: 12px;
+        background-color: $maincolor;
+        border-radius: 1px;
+        transition: .15s;
+      }
+      &::after{
+        transform: rotate(90deg) translate(-6px, 1px);
+      }
+    }
+  }
+  &-body {
+    margin-top: 0px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease-in;
+    p, a{
+      color: $dark700;
+      line-height: 24px;
+    }
+    .accordion-associates__body {
+      &:not(:last-child) {
+        border-bottom: 1px solid $lines;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+      }
+      strong {
+        color: $maincolor;
+      }
+      p, a {
+        margin-bottom: 5px;
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
