@@ -30,8 +30,13 @@
             }
             &--body{
               position: absolute;
-              @include adaptiv-value("padding", 55, 15, 1);
               bottom: 0;
+              height: 100%;
+              @include adaptiv-value("padding", 55, 15, 1);
+
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
               .hero__details{
                 display: flex;
                 align-items: center;
@@ -44,6 +49,9 @@
                 span, a {
                   text-transform: uppercase;
                   color: #FFF;
+                }
+                .tag {
+                  z-index: 10;
                 }
               }
               .hero__title{

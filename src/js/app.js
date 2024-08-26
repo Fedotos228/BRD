@@ -8,7 +8,7 @@ const header = document.querySelector('.header')
 const burger = document.querySelector('.burger')
 const menu = document.querySelector('.header__nav--mobile')
 const headerSearch = document.querySelector('.header__search')
-const linkItem = document.querySelectorAll('[data-icon]')
+const linkItem = document.querySelectorAll('.link')
 const heroCards = document.querySelectorAll('.hero-cards__item')
 
 if (burger && menu) {
@@ -81,11 +81,11 @@ function createIcon(icon, type, paths) {
 
 if (linkItem) {
 	linkItem.forEach(item => {
-		const linkText = item.querySelector('p')
+
 		const icon = document.createElement('i')
 		item.appendChild(icon)
-		icon.insertAdjacentElement('afterend', linkText)
-		const link = item.getAttribute('href')
+		item.insertAdjacentElement('afterbegin', icon)
+		const link = item.querySelector('a').getAttribute('href')
 		const extension = link.split('.').pop()
 
 		switch (extension) {

@@ -56,7 +56,7 @@ p {
 	border-radius: 8px;
 }
 
-.search {
+.search:not(body) {
 	position: relative;
 	width: 100%;
 	height: 48px;
@@ -80,9 +80,10 @@ p {
 	&:hover {
 		border-color: $azure;
 	}
-	&-posts {
-		margin: 50px auto;
-	}
+}
+
+.search-posts {
+	margin: 50px auto;
 }
 
 input {
@@ -377,40 +378,33 @@ input {
 	border-radius: 8px;
 }
 
-.links {
+.link {
 	margin-top: 10px;
-	border: 1px solid $lines;
-	border-radius: 8px;
+
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
 	transition: 0.2s;
 
-	&-item {
-		display: block;
-		width: 100%;
-		@include adaptiv-value('padding', 24, 18, 1);
-		border-bottom: 1px solid $lines;
-		&:hover {
-			border-color: $azure;
-			.links-item {
-				&__title {
-					color: $azure;
-				}
-			}
-		}
-		&__title {
-			font-size: 16px;
-			font-weight: 500;
-			transition: 0.2s;
-		}
-		&__details {
-			display: flex;
-			align-items: center;
-			gap: 10px;
-			margin-top: 10px;
-			p {
-				color: $azure;
-				text-decoration: underline;
-			}
-		}
+}
+
+.wp-block-group__inner-container:has(.link) {
+	padding: 20px;
+	border-bottom: 1px solid $lines;
+	&:last-of-type{
+		border-bottom-width: 0;
+	}
+}
+
+.link-title {
+	color: $maincolor !important;
+	font-size: 16px;
+	font-weight: 500;
+	transition: 0.2s;
+	margin-bottom: 15px !important;
+	&:hover {
+		color: $azure;
 	}
 }
 
