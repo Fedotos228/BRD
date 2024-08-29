@@ -29,8 +29,15 @@ if (headerSearch) {
 	document.addEventListener('click', e => {
 		if (e.target.closest('.header__search-button')) {
 			headerSearchButton.setAttribute('type', 'submit')
+			headerSearchButton.disabled = true
+
+			setTimeout(() => {
+				headerSearchButton.disabled = false
+			}, 500)
+
 			headerSearch.classList.add('active')
 			headerSearch.querySelector('input').focus()
+
 		}
 
 		if (
