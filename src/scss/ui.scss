@@ -397,6 +397,34 @@ input {
 	}
 }
 
+.program-single__body
+ .wp-block-group:has(.wp-block-heading.section-title)
+ .wp-block-group {
+ padding: 24px;
+}
+
+.wp-block-group__inner-container:has(.link) {
+ padding: 0;
+}
+
+.page-12 .program-single__content {
+ padding: 0;
+}
+
+.wp-block-group.files-block .link-title {
+ font-size: 16px;
+ font-weight: 500;
+ transition: 0.2s;
+ color: #232323;
+}
+
+.wp-block-group.files-block .wp-block-file.link {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ font-size: 14px;
+}
+
 .link-title {
 	color: $maincolor !important;
 	font-size: 16px;

@@ -114,7 +114,7 @@ if (link) {
 		const icon = document.createElement('i')
 		item.appendChild(icon)
 		item.insertAdjacentElement('afterbegin', icon)
-		const link = item.querySelector('a').getAttribute('href')
+		const link = item.querySelector('a').getAttribute('href')x
 		const extension = link.split('.').pop()
 
 		switch (extension) {
