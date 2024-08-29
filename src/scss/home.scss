@@ -8,13 +8,21 @@
         .slider-hero__body {
           border-radius: 8px;
           .slider-hero__slide {
+            cursor: pointer;
             position: relative;
             height: 618px;
             @media (max-width: $tablet) {
               height: calc(100vh - 300px);
             }
             border-radius: 8px;
+            &:hover {
+              .slider-hero__slide--image {
+                transform: scale(1.05);
+                
+              }
+            }
             &--image {
+              cursor: pointer;
               position: absolute;
               overflow: hidden;
               height: 100%;
@@ -24,48 +32,37 @@
               justify-content: flex-end;
               border-radius: 8px;
               transition: .45s ease-out;
-              &:hover {
-                transform: scale(1.05);
+              &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                z-index: 3;
               }
             }
-            &--body{
+            &--title {
               position: absolute;
               bottom: 0;
-              height: 100%;
-              @include adaptiv-value("padding", 55, 15, 1);
-
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-end;
-              .hero__details{
+              left: 0;
+              @include adaptiv-value("padding", 50, 15, 1);
+              z-index: 1;
+              h2 {
+                color: #FFF
+              }
+              .title-details{
                 display: flex;
                 align-items: center;
                 gap: 8px;
                 margin-bottom: 12px;
-                time {
+                data {
                   color: $white800;
+                  font-size: 14px;
                   text-transform: uppercase;
                 }
-                span, a {
-                  text-transform: uppercase;
+                span {
                   color: #FFF;
-                }
-                .tag {
-                  z-index: 10;
-                }
-              }
-              .hero__title{
-                font-size: 36px;
-                font-weight: 700;
-                line-height: 52px;
-                color: #FFF;
-                &::after {
-                  content: '';
-                  position: absolute;
-                  inset: 0;
-                  width: 100%;
-                  height: 100%;
-                  cursor: pointer;
+                  text-transform: uppercase;
                 }
               }
             }

@@ -11,31 +11,29 @@
 					<div class="hero-slider__body">
 						<div class="hero-slider__slider">
 							<div class="slider-hero__body swiper">
-								<div href="#" class="slider-hero__slide">
+								<a href="/brd-lanseaza-nu-stiu-ce" class="slider-hero__slide"
+									onmouseover='liniarChanger(this, "@img/hero.jpeg")'
+									onmouseout='liniarChangerOut(this, "@img/hero.jpeg")'>
 									<div class="slider-hero__slide--image" style="
-												background: linear-gradient(
-														180deg,
-														rgba(0, 0, 0, 0.6) 0%,
-														rgba(0, 0, 0, 0.6) 100%
-													),
-													url('@img/hero.jpeg') 50%
-														50% / cover no-repeat;
-											" onmouseover='liniarChanger(this, "@img/hero.jpeg")' onmouseout='liniarChangerOut(this, "@img/hero.jpeg")'>
+															background: linear-gradient(
+																	180deg,
+																	rgba(0, 0, 0, 0.6) 0%,
+																	rgba(0, 0, 0, 0.6) 100%
+															),
+															url('@img/hero.jpeg') 50%
+																	50% / cover no-repeat;
+													">
 									</div>
-									<div class="slider-hero__slide--body">
-										<div class="hero__details">
-											<time datetime="20 martie 2024">20 martie 2024</time>
-											<span> / </span>
-											<a href='/noutati' class="tag">Noutăți</a>
+									<div class='slider-hero__slide--title'>
+										<div class='title-details'>
+											<data value="20 martie 2024">20 martie 2024</data>
+											<span>/</span>
+											<span>Noutăți</span>
 										</div>
-										<a class='hero__title' href='/brd-lanseaza-nu-stiu-ce'>
-											Biroul relații cu diaspora
-											lansează o nouă rundă de
-											granturi în cadrul Programului
-											Diaspora Engagement Hub
-										</a>
+										<h2>Biroul relații cu diaspora lansează o nouă rundă
+											de granturi în cadrul Programului Diaspora Engagement Hub</h2>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="slider-hero-controls">
 								<div class="slider-hero-controls__arrows slider-arrows">
@@ -220,14 +218,16 @@
 
 	<script>
 		function liniarChanger(element, imgSrc) {
-			gsap.to(element, {
+			const image = element.querySelector('.slider-hero__slide--image')
+			gsap.to(image, {
 				duration: 0.3,
 				backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, var(--black100)), url(${imgSrc})`,
 			})
 		}
 
 		function liniarChangerOut(element, imgSrc) {
-			gsap.to(element, {
+			const image = element.querySelector('.slider-hero__slide--image')
+			gsap.to(image, {
 				duration: 0.3,
 				backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, var(--black100)), url(${imgSrc})`,
 			})
