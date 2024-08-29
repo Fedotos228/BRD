@@ -8,7 +8,9 @@ const header = document.querySelector('.header')
 const burger = document.querySelector('.burger')
 const menu = document.querySelector('.header__nav--mobile')
 const headerSearch = document.querySelector('.header__search')
-const linkItem = document.querySelectorAll('.link')
+const linkItem = document.querySelectorAll('[data-icon]')
+const link = document.querySelectorAll('.link')
+
 const heroCards = document.querySelectorAll('.hero-cards__item')
 
 if (burger && menu) {
@@ -81,7 +83,27 @@ function createIcon(icon, type, paths) {
 
 if (linkItem) {
 	linkItem.forEach(item => {
+		const icon = item.querySelector('i')
+		const link = item.getAttribute('href')
+		const extension = link.split('.').pop()
 
+		switch (extension) {
+			case 'pdf':
+				return createIcon(icon, 'pdf', 9)
+			case 'doc':
+			case 'docx':
+				return createIcon(icon, 'docx', 7)
+			case 'xlsx':
+			case 'xlx':
+				return createIcon(icon, 'xlsx', 7)
+			default:
+				icon.classList.add('icon-link')
+		}
+	})
+}
+
+if (link) {
+	link.forEach(item => {
 		const icon = document.createElement('i')
 		item.appendChild(icon)
 		item.insertAdjacentElement('afterbegin', icon)
