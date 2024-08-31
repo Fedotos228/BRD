@@ -825,6 +825,28 @@
 				backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, var(--black100)), url(${imgSrc})`,
 			})
 		}
+
+		const heroCards = document.querySelectorAll('.hero-cards__item')
+
+		if (heroCards.length > 0) {
+			heroCards.forEach(card => {
+				card.addEventListener('mouseover', () => {
+					gsap.to(card, {
+						duration: 0.3,
+						backgroundImage:
+							'linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), url("../img/uzor.png") ',
+					})
+				})
+
+				card.addEventListener('mouseout', () => {
+					gsap.to(card, {
+						duration: 0.3,
+						backgroundImage:
+							'linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 1) 100%), url("../img/uzor.png") ',
+					})
+				})
+			})
+		}
 	</script>
 	<script src="js/app.min.js"></script>
 </body>

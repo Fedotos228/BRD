@@ -56,33 +56,8 @@ p {
 	border-radius: 8px;
 }
 
-.search:not(body) {
-	position: relative;
-	width: 100%;
-	height: 48px;
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	border: 1px solid $lines;
-	border-radius: 8px;
-	padding-left: 12px;
-	transition: 0.2s;
-	> button {
-		width: 20px;
-		height: 20px;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	> input {
-		padding: 12px 12px 12px 0;
-	}
-	&:hover {
-		border-color: $azure;
-	}
-}
 
-.search-posts {
+.full-content {
 	margin: 50px auto;
 }
 
@@ -165,6 +140,18 @@ input {
 
 .grid {
 	display: grid;
+}
+
+.not-found {
+	h4{
+		span {
+			color: $azure;
+		}
+	}
+}
+
+.col-span-full {
+	grid-column: 1 / -1;
 }
 
 .posts-grid {
@@ -378,17 +365,6 @@ input {
 	border-radius: 8px;
 }
 
-.link {
-	margin-top: 10px;
-
-	display: flex;
-	align-items: center;
-	gap: 10px;
-
-	transition: 0.2s;
-
-}
-
 .wp-block-group__inner-container:has(.link) {
 	padding: 20px;
 	border-bottom: 1px solid $lines;
@@ -433,21 +409,6 @@ input {
 	margin-bottom: 15px !important;
 	&:hover {
 		color: $azure;
-	}
-}
-
-.search-results__title {
-	background-color: rgba(242, 245, 247, 1);
-	padding: 50px 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	gap: 5px;
-	p {
-		span {
-			color: $azure;
-		}
 	}
 }
 

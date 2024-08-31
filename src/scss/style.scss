@@ -1,8 +1,5 @@
 @use 'sass:math';
 @use '../../node_modules/sass-rem' as *;
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 // Conectarea MIXINURILOR ==============================================================================================================
 @import 'base/mixin.scss';
 // Conectarea Fonturilor
@@ -115,6 +112,8 @@ $mobileSmall: rem(479.98px);
 @import 'components/__pagination.scss';
 @import 'components/__accordion.scss';
 @import 'components/__video-card.scss';
+@import 'components/__search.scss';
+@import 'components/__links.scss';
 // Conectarea stilurilor pentru pagini
 @import 'home';
 @import 'team';

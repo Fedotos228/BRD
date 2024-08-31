@@ -11,8 +11,6 @@ const headerSearch = document.querySelector('.header__search')
 const linkItem = document.querySelectorAll('[data-icon]')
 const link = document.querySelectorAll('.link')
 
-const heroCards = document.querySelectorAll('.hero-cards__item')
-
 if (burger && menu) {
 	flsFunctions.burger(burger, menu, header)
 }
@@ -109,12 +107,22 @@ if (linkItem) {
 	})
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+	const sn = document.querySelector('.copyright')
+	if (sn) {
+		const currentYear = new Date().getFullYear()
+		let text = sn.textContent
+		text = text.replace(/{year}\./g, `${currentYear}.`)
+		sn.textContent = text
+	}
+})
+
 if (link) {
 	link.forEach(item => {
 		const icon = document.createElement('i')
 		item.appendChild(icon)
 		item.insertAdjacentElement('afterbegin', icon)
-		const link = item.querySelector('a').getAttribute('href')x
+		const link = item.querySelector('a').getAttribute('href')
 		const extension = link.split('.').pop()
 
 		switch (extension) {
@@ -131,6 +139,7 @@ if (link) {
 		}
 	})
 }
+
 
 if (heroCards.length > 0) {
 	heroCards.forEach(card => {
